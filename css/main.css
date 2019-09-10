@@ -17,13 +17,13 @@
 @media screen and (max-width: 600px) {
     body {
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
-        font-size: 4vw;
-        line-height: 5vw;
+        font-size: 6vw;
+        line-height: 7vw;
         margin: 1px auto;
         width: 90%;
     }
     h1 {
-        font-size: 6vw;
+        font-size: 8vw;
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
     }
 }
