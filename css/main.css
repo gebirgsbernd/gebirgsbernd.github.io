@@ -2,13 +2,13 @@
 @media screen and (min-width: 601px) {
     body {
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
-        font-size: 2vw;
-        line-height: 3vw;
+        font-size: 1em;
+        line-height: 1.5em;
         margin: 1px auto;
         width: 90%;
     }
     h1 {
-        font-size: 4vw;
+        font-size: 2em;
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
     }
 }
@@ -17,13 +17,13 @@
 @media screen and (max-width: 600px) {
     body {
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
-        font-size: 12vw;
-        line-height: 15vw;
+        font-size: 1.5em;
+        line-height: 1.7em;
         margin: 1px auto;
-        width: 95%;
+        width: 90%;
     }
     h1 {
-        font-size: 16vw;
+        font-size: 2em;
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
     }
 }
