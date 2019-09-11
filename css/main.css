@@ -1,5 +1,18 @@
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-    body {
+/* Mobile First */
+body {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 2em;
+    line-height: 2.2em;
+    margin: 1px auto;
+    width: 90%;
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */    body {
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
         font-size: 1em;
         line-height: 1.5em;
@@ -10,23 +23,9 @@
         font-size: 2em;
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
     }
-
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
-    body {
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-        font-size: 1.5em;
-        line-height: 1.7em;
-        margin: 1px auto;
-        width: 90%;
-    }
-    h1 {
-        font-size: 2em;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
 }
+
+
 
 
 nav ul, footer ul {
