@@ -1,32 +1,15 @@
-/* Mobile First */
+
 body {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.4em;
-    line-height: 1.6em;
+    font-size: 1em;
+    line-height: 1.5em;
     margin: 1px auto;
     width: 90%;
 }
 h1 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
-
-@media only screen and (min-width: 600px) {
-    /* For desktop: */
-    body {
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-        font-size: 1em;
-        line-height: 1.5em;
-        margin: 1px auto;
-        width: 90%;
-    }
-    h1 {
-        font-size: 2em;
-        font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    }
-}
-
-
 
 
 nav ul, footer ul {
