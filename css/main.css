@@ -1,17 +1,17 @@
 /* Mobile First */
 body {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 2em;
-    line-height: 2.2em;
+    font-size: 1.4em;
+    line-height: 1.6em;
     margin: 1px auto;
     width: 90%;
 }
 h1 {
-    font-size: 3em;
+    font-size: 1.5em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
     /* For desktop: */
     body {
         font-family:'Helvetica', 'Arial', 'Sans-Serif';
