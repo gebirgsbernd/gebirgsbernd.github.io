@@ -13,6 +13,13 @@ h1 {
     font-family: 'Darker Grotesque', sans-serif;
 }
 
+@media screen and (max-width: 600px) {
+    nav {
+        visibility: hidden;
+        height: 0px
+    }
+}
+
 nav ul, footer ul {
     font-family: 'Darker Grotesque', sans-serif;
     padding: 0px;
