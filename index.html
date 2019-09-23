@@ -2,35 +2,23 @@
 layout: default
 title: Bernd Beyreuther
 ---
-<style>  
-
-	img { 
-		max-width:100%;
-        margin: 0px;
-	} 
-
-
-</style>
-
-
-<picture>
-    <source srcset="{{ site.url }}{{ site.baseurl }}/assets/header_portrait.jpg" media="(max-width: 600px)">
-    <source srcset="{{ site.url }}{{ site.baseurl }}/assets/header_wide.jpg">
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/header_wide.jpg" style="width:100%;">
-</picture>
-<p   style="margin:20px;">
-Personal website of Bernd Beyreuther.
-<br>
-This page is currently under construction...
+<h1>
+Bernd Beyreuther - Game Producer
+</h1>
+<p>
+My games:
 <ul>
-<li><a href="/about">About me</a></li>
-<li><a href="/drakensang">Drakensang</a></li>
-<li>Drakensang Online</li>
-<li>Urban Assault</li>
-<li>GDR 1989</li>
-<li>Concepts and Prototypes</li>
-<li>... and more</li>
-<li><a href="/links">Articles and Interviews</a></li>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+  
+  <li>This page is currently under construction. More to come...</li>
+  </li>
+
 </ul>
+<a href="/about">About me</a>
+<br>
+<a href="/links">Articles and Interviews</a>
 </p>
 

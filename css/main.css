@@ -4,11 +4,13 @@ body {
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 1.3em;
     line-height: 1.35em;
-    margin: 0px;
+    margin: 20px;
     width: 100%;
     background-color: white;
 }
 h1 {
+    font-style: normal;
+    font-weight: normal;
     font-size: 1.5em;
     font-family: 'Darker Grotesque', sans-serif;
 }
@@ -35,10 +37,18 @@ a {
     color: #888888;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: normal;
+    color: black;
+   background-color: lightskyblue;
 }
 
 p {
     color: #333;
 }
 
+#closebutton {
+    font-size: 1.5em;
+    position: absolute;
+    right: 25px;
+    top: -10px;
+}
