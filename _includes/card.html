@@ -1,0 +1,10 @@
+<a href="{{ post.url | relative_url }}">
+    <div class=post>
+    <b>{{ post.title | strip_html | truncate: 40 }}</b>
+    <br>
+    {{ post.content | strip_html | truncatewords: 15 }}
+    </div>
+</a>
+
+<br>
+

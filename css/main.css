@@ -1,6 +1,11 @@
-
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body {
+    max-width: 100%;
+    overflow-x: hidden;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 1.3em;
     line-height: 1.35em;
@@ -12,6 +17,14 @@ h1 {
     font-style: normal;
     font-weight: normal;
     font-size: 1.5em;
+    line-height: 1.5em;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.3em;
     font-family: 'Darker Grotesque', sans-serif;
 }
 
@@ -39,7 +52,6 @@ a {
 a:hover {
     text-decoration: normal;
     color: black;
-   background-color: lightskyblue;
 }
 
 p {
@@ -50,5 +62,17 @@ p {
     font-size: 1.5em;
     position: absolute;
     right: 25px;
-    top: -10px;
+    top: 0px;
+}
+
+.post {
+    border-radius: 4px;
+    background: #eeeeee;
+    padding:8px;
+    border: 1px solid #aaaaaa;
+}
+
+.post:hover {
+    background: #f8f8f8;
+    border: 1px solid #dddddd;
 }

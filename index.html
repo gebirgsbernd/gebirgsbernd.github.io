@@ -5,20 +5,23 @@ title: Bernd Beyreuther
 <h1>
 Bernd Beyreuther - Game Producer
 </h1>
-<p>
 My games:
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-  {% endfor %}
+<br>
+<br>
+    
+{% for post in site.posts %}
+{% include card.html %}
+{% endfor %}
   
-  <li>This page is currently under construction. More to come...</li>
-  </li>
+This page is currently under construction. More to come...
 
-</ul>
+
+<br>
 <a href="/about">About me</a>
 <br>
 <a href="/links">Articles and Interviews</a>
 </p>
+
+<div style="font-size:0.5em; color:#aaaaaa;"> Updated 2019-Sep-24
+</div>
 
