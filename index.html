@@ -2,26 +2,35 @@
 layout: default
 title: Bernd Beyreuther
 ---
-<h1>
-Bernd Beyreuther - Game Producer
-</h1>
-My games:
-<br>
-<br>
-    
-{% for post in site.posts %}
-{% include card.html %}
-{% endfor %}
-  
-This page is currently under construction. More to come...
+<header>
+    <h1>
+    Bernd Beyreuther - Game Producer
+    </h1>
+</header>
 
+<nav>
+    My games
+</nav>
 
-<br>
-<a href="/about">About me</a>
-<br>
-<a href="/links">Articles and Interviews</a>
-</p>
+<main class="site_content">
+    <section class="contentbox">
+        <div class="gridcontainer">
+        {% for post in site.posts %}
+        {% include card.html %}
+        {% endfor %}
+        </div><!-- /.gridcontainer -->
+    </section>
+    <section class="contentbox">
+        This page is currently under construction. More to come...
+        <br>
+        <br>
+        <a href="/about">About me</a>
+        <br>
+        <a href="/links">Articles and Interviews</a>
+    </section>
+</main>
 
-<div style="font-size:0.5em; color:#aaaaaa;"> Updated 2019-Sep-24
-</div>
+<footer>
+    <div style="font-size:0.5em; color:#aaaaaa;"> Updated 2019-Sep-25 </div>
+</footer>
 
