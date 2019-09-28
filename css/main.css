@@ -97,3 +97,28 @@ p {
     border: 1px solid #dddddd;
 }
 
+.maintabs{
+    display: grid;
+    height: auto;
+    grid-template-columns: 12% 12% 12% 12% 12%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    font-size: 0.75em; 
+}
+@media only screen and (max-width: 600px){
+    .maintabs{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tabitem {
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.tabitem:hover {
+    background: #fcfcfc;
+    color: #000000;
+}
