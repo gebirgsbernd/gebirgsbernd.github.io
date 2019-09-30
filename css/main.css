@@ -42,8 +42,8 @@ p {
   display: grid;
   height: auto;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 10px auto;
-  padding: 5px;
+  margin:  0px auto;
+  padding: 0px;
 }
 @media only screen and (max-width: 600px){
   .gridcontainer{
@@ -89,41 +89,27 @@ p {
 }
 
 .post {
-    border-radius: 3px;
+    border-radius: 4px;
     background: #eeeeee;
     padding: 0px;
-    border: 1px solid #aaaaaa;
-    margin: 3%;
+    border: 1px solid #eeeeee;
+    margin: 5%;
+}
+@media only screen and (max-width: 600px){
+    .post{
+        margin-top: 8px;
+        margin-right: 2px;
+        margin-left: 2px;
+    }
 }
 
 .post:hover {
     background: #f8f8f8;
-    border: 1px solid #555555;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+
 }
 
 
-.maintabs{
-    display: grid;
-    height: auto;
-    grid-template-columns: 12% 12% 12% 12% 12%;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    font-size: 0.75em; 
-}
-@media only screen and (max-width: 600px){
-    .maintabs{
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
-.tabitem {
-    background-color: #f8f8f8;
-    border-radius: 4px;
-    padding: 5px;
-    padding-left: 10px;
-}
 
-.tabitem:hover {
-    background: #fcfcfc;
-    color: #000000;
-}

@@ -6,9 +6,17 @@
     <img style="width:100%;" src="{{ site.url }}{{ site.baseurl }}/assets/header/{{post.featured-img}}.jpg"/>
     {% endif %}
         <div style="padding:9px">
+        {% if post.jahr %}
+        {{ post.jahr }}<br>
+        {% else  %}
+        {% endif %}
         <b>{{ post.title | strip_html | truncate: 40 }}</b>
         <br>
+        {% if post.summary %}
+        {{ post.summary | strip_html | truncatewords:20 }}
+        {% else %}
         {{ post.content | strip_html | truncatewords: 20 }}
+        {% endif %}
         </div>
     </div>
 </a>
