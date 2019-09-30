@@ -3,7 +3,8 @@
     <div class=post>
     
     {% if post.featured-img %}
-    <img style="width:100%;" src="{{ site.url }}{{ site.baseurl }}/assets/header/{{post.featured-img}}.jpg"/>
+    <img style="width:100%;   border-top-left-radius: 5px; border-top-right-radius: 5px;
+" src="{{ site.url }}{{ site.baseurl }}/assets/header/{{post.featured-img}}.jpg"/>
     {% endif %}
         <div style="padding:9px">
         {% if post.jahr %}
