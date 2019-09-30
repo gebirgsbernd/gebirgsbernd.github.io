@@ -1,9 +1,15 @@
 <div>
 <a href="{{ post.url | relative_url }}">
     <div class=post>
-    <b>{{ post.title | strip_html | truncate: 40 }}</b>
-    <br>
-    {{ post.content | strip_html | truncatewords: 20 }}
+    
+    {% if post.featured-img %}
+    <img style="width:100%;" src="{{ site.url }}{{ site.baseurl }}/assets/header/{{post.featured-img}}.jpg"/>
+    {% endif %}
+        <div style="padding:9px">
+        <b>{{ post.title | strip_html | truncate: 40 }}</b>
+        <br>
+        {{ post.content | strip_html | truncatewords: 20 }}
+        </div>
     </div>
 </a>
 </div>

@@ -84,18 +84,23 @@ p {
     top: 0px;
 }
 
+#closebutton:hover {
+    font-size: 1.6em;
+}
+
 .post {
     border-radius: 3px;
     background: #eeeeee;
-    padding: 9px;
+    padding: 0px;
     border: 1px solid #aaaaaa;
     margin: 3%;
 }
 
 .post:hover {
     background: #f8f8f8;
-    border: 1px solid #dddddd;
+    border: 1px solid #555555;
 }
+
 
 .maintabs{
     display: grid;

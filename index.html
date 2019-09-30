@@ -1,17 +1,57 @@
 ---
 layout: default
-title: Bernd Beyreuther
+title: Bernd Beyreuther. Game Producer.
 ---
-<header>
-    <h1>
-    Bernd Beyreuther - Game Producer
-    </h1>
-</header>
 <main class="site_content">
     <section class="contentbox">
-        My games.
+        <b>My games.</b>
         <div class="gridcontainer">
-        {% for post in site.categories.01_games %}
+        {% for post in site.categories.z_games %}
+        {% include card.html %}
+        {% endfor %}
+        </div><!-- /.gridcontainer -->
+    </section>
+    <section class="contentbox">
+        <b>About me.</b>
+        <p>
+        Game Producer. Located in Berlin.
+        <br>
+        Currently working as Head of Studio at Softgames.
+        <br>
+        <ul>
+        <li>
+        <a href="https://www.linkedin.com/in/berndbeyreuther/">
+        My CV @ LinkedIn
+        </a>
+        </li>
+            
+        <li>
+        <a href="https://www.mobygames.com/developer/sheet/view/developerId,117427/">
+        My trackrecord at Mobygames.
+        </a>
+        (Games until 2011)
+        </li>
+        </ul>
+        FIXME: Add  CV here. Should be visual and responsive.
+            <div class="gridcontainer">
+            {% for post in site.categories.z_aboutme %}
+            {% include card.html %}
+            {% endfor %}
+            </div><!-- /.gridcontainer -->
+         </p>
+    </section>
+    <section class="contentbox">
+        <b>Concepts, prototypes, unreleased games.</b>
+        <div class="gridcontainer">
+        {% for post in site.categories.z_concepts %}
+        {% include card.html %}
+        {% endfor %}
+        </div><!-- /.gridcontainer -->
+    </section>
+    <section class="contentbox">
+        <b>Non game related stuff.</b>
+        <div class="gridcontainer">
+        {% for post in site.categories.z_other %}
         {% include card.html %}
         {% endfor %}
         </div><!-- /.gridcontainer -->
@@ -19,6 +59,6 @@ title: Bernd Beyreuther
 </main>
 
 <footer>
-    <div style="font-size:0.6em; color:#aaaaaa;"> Updated 2019-Sep-28 </div>
+    <div style="font-size:0.7em; color:#aaaaaa;"> Updated 2019-Sep-30 </div>
 </footer>
 
