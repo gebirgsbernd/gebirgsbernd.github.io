@@ -2,14 +2,19 @@
 layout: default
 title: Bernd Beyreuther. Game Producer.
 ---
+<div style="position: absolute; left: 0px; top: 0px; width:100%; height:90px; background-color:#f0f0f0; z-index:-5;">
+</div>
 <header>
-    <h1>
-    Bernd Beyreuther - Game Producer
-    </h1>
+    <h1 style="margin:0px; line-height:25px;">Bernd Beyreuther     <span style="font-size:0.7em; color:#888888">Game Producer</span></h1>
+    <div style="float:top;">
+    <span style="font-size:0.7em; color:#888888">Personal Website - Currently under construction</span>
+    </div>
+    <br>
 </header>
+
 <main class="site_content">
     <section class="contentbox">
-        <b>My games.</b>
+        <span style="font-size:1.5em;">My games. </span><span style="font-size:0.8em; color:#cccccc"> (Atleast some of them.) </span>
         <div class="gridcontainer">
         {% for post in site.categories.z_games %}
         {% include card.html %}
@@ -17,7 +22,7 @@ title: Bernd Beyreuther. Game Producer.
         </div><!-- /.gridcontainer -->
     </section>
     <section class="contentbox">
-        <b>About me.</b>
+        <span style="font-size:1.5em;">About me.</span>
         <p>
         Game Producer. Located in Berlin.
         <br>
@@ -46,7 +51,7 @@ title: Bernd Beyreuther. Game Producer.
          </p>
     </section>
     <section class="contentbox">
-        <b>Concepts, prototypes, unreleased games.</b>
+        <span style="font-size:1.5em;">Concepts, prototypes, unreleased games.</span>
         <div class="gridcontainer">
         {% for post in site.categories.z_concepts %}
         {% include card.html %}
@@ -54,7 +59,7 @@ title: Bernd Beyreuther. Game Producer.
         </div><!-- /.gridcontainer -->
     </section>
     <section class="contentbox">
-        <b>Non game related stuff.</b>
+        <span style="font-size:1.5em;">Non game related stuff.</span>
         <div class="gridcontainer">
         {% for post in site.categories.z_other %}
         {% include card.html %}
@@ -64,6 +69,6 @@ title: Bernd Beyreuther. Game Producer.
 </main>
 
 <footer>
-    <div style="font-size:0.7em; color:#aaaaaa;"> Updated 2019-Sep-30 </div>
+    <div style="font-size:0.7em; color:#aaaaaa;"> Updated 2019-Oct-02 </div>
 </footer>
 
