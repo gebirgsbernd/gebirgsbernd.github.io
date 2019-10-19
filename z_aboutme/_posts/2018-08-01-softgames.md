@@ -18,4 +18,4 @@ FIXME: Add more : JEWELS BLITZ. YUMMY TALES.  TRIVIA QUIZ.  COOK LINE. ...
 * 2019-Jun-03 [golem.de "30 Sekunden spielen, 30 Sekunden Werbung](https://www.golem.de/news/hyper-casual-games-30-sekunden-spielen-30-sekunden-werbung-1906-141165.html) About Hyper Casual (German)
 *  2019-Apr-13 [t3n "Jobaussichten in der Gamesbranche waren nie besser](https://t3n.de/news/jobaussichten-gamesbranche-waren-1156280) Interview (German)
 * 2018-Nov-19 [Games Career Blog. "Leidenschaft für Spieleenwicklung"](https://blog.games-career.com/de/koepfe-der-spielebranche-interview-mit-bernd-beyreuther-von-softgames) Interview(German)
-
+* 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
