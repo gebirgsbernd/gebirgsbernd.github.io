@@ -9,12 +9,13 @@ I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of S
 My tasks include structuring and organization of the game development, BI and to build up an internal game studio from 10 to 60 people, expand and grow existing titles and develop new games.
 
 Some of the titles my games teams created:
-* [Solitaire Story Tripeaks](https://fb.gg/play/solitaire_tripeaks)  Producer and Gamedesigner: Alex Letov
-* [Mahjong Story](https://fb.gg/play/mahjong_story_) Producer and Gamedesigner: Murillo Carvalho dos Santos
+* [Solitaire Story Tripeaks](https://fb.gg/play/solitaire_tripeaks)  Producer: Alex Letov
+* [Mahjong Story](https://fb.gg/play/mahjong_story_) Producer: Murillo Carvalho dos Santos
 * [Jewels Blitz] Producer: Dave Faßbender
 * [Yummy Tales] Producer: Dave Faßbender
-* [Trivia Quiz](https://fb.gg/play/trivia_quiz_) Producer : Peter Harmjanz, Gamedesigner: Christoph Büsser
+* [Trivia Quiz](https://fb.gg/play/trivia_quiz_) Producer : Peter Harmjanz
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) Producer: Cem Elmas
+* [My Little Farm](https://fb.gg/play/sim-farm) Producer: Peter Harmjanz
 * Cookie Crush on LINE
 
 FIXME: Add some nice pictures here.
