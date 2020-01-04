@@ -1,10 +1,14 @@
 <p class="image-gallery">
+{% assign i = 0 %}
 {% for file in site.static_files %}
     {% if file.path contains include.folder %}
         {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
             {% assign filenameparts = file.path | split: "/" %}
             {% assign filename = filenameparts | last | replace: file.extname,"" %}
-            <img src="{{ file.path }}" onclick="openModal();currentSlide(1)" class="hover-shadow gallerypic">
+
+            {% assign i = i | plus:1 %}
+
+            <img src="{{ file.path }}" onclick="openModal(); currentSlide( {{i}} )" class="hover-shadow gallerypic">
         {% endif %}
     {% endif %}
 {% endfor %}
@@ -22,7 +26,7 @@
                 {% assign filenameparts = file.path | split: "/" %}
                 {% assign filename = filenameparts | last | replace: file.extname,"" %}
                 <div class="mySlides">
-                    <img src="{{ file.path }}" style="width:100%">
+                    <img src="{{ file.path }}" style="width:100%;">
                 </div>
             {% endif %}
         {% endif %}
