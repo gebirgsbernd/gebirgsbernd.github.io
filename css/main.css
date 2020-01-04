@@ -284,12 +284,12 @@ p {
 
 .prev:hover,
 .next:hover {
-  color: white;
+  color: gray;
 }
 @media only screen and (min-width: 600px){
     .prev:hover,
     .next:hover {
-      color: gray;
+      color: white;
     }
 }
 
