@@ -15,11 +15,8 @@
 </p>
 
 <div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <span class="close" onclick="closeModal()">&times;</span>
   <div class="modal-content">
-
-
-
     {% for file in site.static_files %}
         {% if file.path contains include.folder %}
             {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
@@ -33,14 +30,9 @@
             {% endif %}
         {% endif %}
     {% endfor %}
-    
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-
    </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
 <script>
