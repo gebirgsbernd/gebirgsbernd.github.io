@@ -26,7 +26,9 @@
                 {% assign filenameparts = file.path | split: "/" %}
                 {% assign filename = filenameparts | last | replace: file.extname,"" %}
                 <div class="mySlides">
-                    <img src="{{ file.path }}" style="width:100%;">
+                    <div class="insideslide">
+                        <img src="{{ file.path }}">
+                    </div>
                 </div>
             {% endif %}
         {% endif %}
