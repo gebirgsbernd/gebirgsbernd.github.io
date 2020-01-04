@@ -167,8 +167,7 @@ p {
     border-color: #000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     position: absolute;
-    top: 100px;
-    display: block;
+    top: 80px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -182,7 +181,6 @@ p {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
         position: absolute;
         top: 10px;
-        display: block;
         margin-left: auto;
         margin-right: auto;
         width: 60%;
@@ -190,14 +188,12 @@ p {
 }
 
 .insideslide {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
 @media only screen and (min-width: 600px){
     .insideslide {
-        display: block;
         margin-left: auto;
         margin-right: auto;
         width: 60%;
@@ -285,11 +281,17 @@ p {
   border-radius: 3px 0 0 3px;
 }
 
+
 .prev:hover,
 .next:hover {
   color: white;
 }
-
+@media only screen and (min-width: 600px){
+    .prev:hover,
+    .next:hover {
+      color: gray;
+    }
+}
 
 
 .active {
