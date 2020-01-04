@@ -164,8 +164,8 @@ p {
 .close {
   color: gray;
   position: absolute;
-  top: -35px;
-  right: 15px;
+  bottom: 75px;
+  right: 50%;
   font-size: 75px;
   font-weight: bold;
   z-index: 100;
@@ -219,7 +219,7 @@ p {
     .next {
       cursor: pointer;
       position: absolute;
-      top: 30%;
+      top: 50%;
       width: auto;
       padding: 16px;
       margin-top: -50px;
