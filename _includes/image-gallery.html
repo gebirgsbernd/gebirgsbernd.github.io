@@ -24,7 +24,7 @@
                 {% assign filename = filenameparts | last | replace: file.extname,"" %}
                 <div class="mySlides">
                     <div class="insideslide">
-                        <img src="{{ file.path }}" onclick="closeModal();">
+                        <img src="{{ file.path }}" onclick="closeModal();" class="modalpic">
                     </div>
                 </div>
             {% endif %}
