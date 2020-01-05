@@ -23,9 +23,7 @@
                 {% assign filenameparts = file.path | split: "/" %}
                 {% assign filename = filenameparts | last | replace: file.extname,"" %}
                 <div class="mySlides">
-                    <div class="insideslide">
                         <img src="{{ file.path }}" onclick="closeModal();" class="modalpic">
-                    </div>
                 </div>
             {% endif %}
         {% endif %}
@@ -37,7 +35,9 @@
 
 <script>
 function openModal() {
-  document.getElementById("myModal").style.display = "block";
+    if (window.innerWidth > 600) {
+        document.getElementById("myModal").style.display = "block";
+    }
 }
 
 function closeModal() {

@@ -45,7 +45,7 @@ p {
   margin:  0px auto;
   padding: 0px;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 599px){
   .gridcontainer{
       grid-template-columns: 1fr;
   }
@@ -58,25 +58,29 @@ p {
 
 
 .image-gallery{
-    padding-left: 3%;
-    right: 3%;
+    padding-left: 2%;
+    right: 2%;
     display: grid;
     height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 599px){
     .image-gallery{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
 .gallerypic{
-    width: 90%;
+    width: 95%;
     border-radius: 4px;
     margin: 4px;
     border-style: solid;
     border-width: 1px;
     border-color: #eee;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -134,98 +138,45 @@ p {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(255, 255, 255, 1);
-}
-@media only screen and (min-width: 600px){
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      padding-top: 50px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Modal Content */
 .modal-content {
-  position: relative;
-  margin: auto;
-  padding: 0;
-  width: 100%;
-  max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .modalpic{
     border-radius: 8px;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-color: #000;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    position: relative;
+    top: 10px;
+    width: 75%;
+    height: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
 }
-@media only screen and (min-width: 600px){
-    .modalpic{
-        border-radius: 8px;
-        border-style: solid;
-        border-width: 2px;
-        border-color: #000;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
-        position: absolute;
-        top: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60%;
-    }
-}
-
-.insideslide {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-@media only screen and (min-width: 600px){
-    .insideslide {
-        margin-left: auto;
-        margin-right: auto;
-        width: 60%;
-    }
-}
-
 
 
 /* The Close Button */
 .close {
   color: gray;
   position: absolute;
-  top: 75%;
-  right: 50%;
-  font-size: 75px;
+  top: -40px;
+  right: 15px;
+  font-size: 85px;
   font-weight: bold;
   z-index: 100;
   transition: 0.1s ease;
 }
-@media only screen and (min-width: 600px){
-    .close {
-      color: gray;
-      position: absolute;
-      top: 0px;
-      right: 55px;
-      font-size: 75px;
-      font-weight: bold;
-      z-index: 100;
-      transition: 0.1s ease;
-    }
-}
-
 
 .close:hover,
 .close:focus {
@@ -244,7 +195,7 @@ p {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 75%;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -256,24 +207,6 @@ p {
   user-select: none;
   -webkit-user-select: none;
 }
-@media only screen and (min-width: 600px){
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -50px;
-      color: gray;
-      font-weight: bold;
-      font-size: 55px;
-      transition: 0.1s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-}
 
 /* Position the "next button" to the right */
 .next {
@@ -284,13 +217,7 @@ p {
 
 .prev:hover,
 .next:hover {
-  color: gray;
-}
-@media only screen and (min-width: 600px){
-    .prev:hover,
-    .next:hover {
-      color: white;
-    }
+  color: white;
 }
 
 
