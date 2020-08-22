@@ -6,7 +6,7 @@ summary: Instant Games.
 **2018 until today**
 
 I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
-My tasks include structuring and organization of the game development, BI and to build up an internal game studio from 10 to 60 people, expand and grow existing titles and develop new games.
+My tasks include structuring and organization of the game development, BI and to build up an internal game studio from 10 to 60 people, grow existing titles, expand to new platforms and develop new games.
 
 Some of the titles my games teams created:
 * [Solitaire Story Tripeaks](https://fb.gg/play/solitaire_tripeaks)  Producer: Alex Letov
@@ -16,7 +16,8 @@ Some of the titles my games teams created:
 * [Trivia Quiz](https://fb.gg/play/trivia_quiz_) Producer : Peter Harmjanz
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) Producer: Cem Elmas
 * [My Little Farm](https://fb.gg/play/sim-farm) Producer: Peter Harmjanz
-* Cookie Crush on LINE
+* [My Little Garden](https://fb.gg/play/my-little-garden) Producer: Michael Gribbin
+* Ports to Japanese platforms LINE and Mobage   Producer: Sam Lynch
 
 FIXME: Add some nice pictures here.
 
