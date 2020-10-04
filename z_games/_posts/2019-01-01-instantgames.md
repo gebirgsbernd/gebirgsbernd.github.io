@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Softgames"
-summary: Instant Games.
+title: "Instant Games"
+summary: Facebook Instant Games @ Softgames
+jahr: 2018 - today
 ---
 **2018 until today**
 
 I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
-My tasks include structuring and organization of the game development, BI and to build up an internal game studio from 10 to 60 people, grow existing titles, expand to new platforms and develop new games.
+My tasks include structuring and organization of the game development, BI and to build up an internal game studio from 10 to 60 people, grow existing titles, expand to new platforms and develop new games. Every now and than I enjoy the opportunity to spend a bit more time being more handson during early phases of development - helping to shape vision, scope, theme and style of a game. 
 
 Some of the titles my games teams created:
 * [Solitaire Story Tripeaks](https://fb.gg/play/solitaire_tripeaks)  Producer: Alex Letov
