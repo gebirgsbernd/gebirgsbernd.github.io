@@ -19,7 +19,7 @@ Some of the titles my games teams created:
 * [My Little Garden](https://fb.gg/play/my-little-garden) Producer: Michael Gribbin
 * Ports to Japanese platforms LINE and Mobage   Producer: Sam Lynch
 
-FIXME: Add some nice pictures here.
+{% include image-gallery.html folder="/assets/instant" short="instant" %}
 
 and more...
 
