@@ -11,6 +11,7 @@
             {% capture textdatei %}{{include.short}}{{filename}}.txt{% endcapture %}
 
             <img src="{{ file.path }}" onclick="openModal(); currentSlide( {{i}} )" class="hover-shadow gallerypic" >
+                       
         {% endif %}
     {% endif %}
 {% endfor %}
