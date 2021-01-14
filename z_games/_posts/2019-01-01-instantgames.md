@@ -5,7 +5,8 @@ featured-img: instant
 summary: Facebook Instant Games @ Softgames
 jahr: 2018 - today
 ---
-My current position.
+Current position.
+
 I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
 My main task was to build up an internal game studio - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 60 people as of 2021, grow existing titles, expand to new platforms and develop new games. Every now and than I enjoy the opportunity to spend a bit more time being more handson during early phases of development - helping to shape vision, scope, theme and style of a game.  But focus is on organisational aspects and change management.
 
