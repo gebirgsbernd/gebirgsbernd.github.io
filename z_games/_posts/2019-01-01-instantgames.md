@@ -13,11 +13,12 @@ My main task was to build up an internal game studio - hiring, building an organ
 Some of the Facebook Instant Game titles my games teams created:
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) 2020 Producer: Cem Elmas, Peter Harmjanz
 * [My Little Garden](https://fb.gg/play/my-little-garden) 2020 Producer: Michael Gribbin, Ylva Mesonero
+* [Jewels Blitz](https://fb.gg/play/jewels_blitz_x) 2020 Producer: Dave Faßbender
 * [Mahjong Story](https://fb.gg/play/mahjong_story_) 2019 Producer: Murillo Carvalho dos Santos
-* [Jewels Blitz](https://fb.gg/play/jewels_blitz) 2019 Producer: Dave Faßbender
 * [Yummy Tales](https://fb.gg/play/yummytales) 2019 Producer: Dave Faßbender
 * [Trivia Quiz](https://fb.gg/play/trivia_quiz_) 2019 Producer : Peter Harmjanz
-* [My Little Farm](https://fb.gg/play/sim-farm) 2018 Producer: Peter Harmjanz
+* [Jewels Blitz Classic](https://fb.gg/play/jewels_blitz) 2019 Producer: Dave Faßbender
+* [My Little Farm] 2018 Producer: Peter Harmjanz
 * [Solitaire Story Tripeaks](https://fb.gg/play/solitaire_tripeaks)  2018 Producer: Alex Letov
 * Ports to Japanese platforms LINE and Mobage   Producer: Sam Lynch
 
