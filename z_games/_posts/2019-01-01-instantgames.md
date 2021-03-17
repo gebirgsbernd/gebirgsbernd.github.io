@@ -34,4 +34,4 @@ Some of the Facebook Instant Game titles my games teams created:
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2020-January-13
+Updated: 2021-Mar-18
