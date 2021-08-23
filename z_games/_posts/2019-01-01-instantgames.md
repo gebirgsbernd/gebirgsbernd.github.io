@@ -8,7 +8,7 @@ jahr: 2018 - today
 Current position.
 
 I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
-My main task was to build up an internal game studio - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 60 people as of 2021, grow existing titles, expand to new platforms and develop new games. Every now and than I enjoy the opportunity to spend a bit more time being more handson during early phases of development - helping to shape vision, scope, theme and style of a game.  But focus is on organisational aspects and change management.
+My main role is to build up a game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 60 people as of 2021, grow existing titles, expand to new platforms and develop new games. Every now and than I enjoy the opportunity to spend a bit more time being more handson during early phases of development - helping to shape vision, scope, theme and style of a game.  But focus is on organisational aspects and change management.
 
 Some of the Facebook Instant Game titles my games teams created:
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) 2020 Producer: Cem Elmas, Peter Harmjanz
