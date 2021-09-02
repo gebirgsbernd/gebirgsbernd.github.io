@@ -8,9 +8,10 @@ jahr: 2018 - today
 Current position.
 
 I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
-My main role is to build up a game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 60 people as of 2021, grow existing titles, expand to new platforms and develop new games. Every now and than I enjoy the opportunity to spend a bit more time being more handson during early phases of development - helping to shape vision, scope, theme and style of a game.  But focus is on organisational aspects and change management.
+My role is to build up the game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 70 people as of 2021, grow existing titles, expand to new platforms and develop new games. This includes  organisational  aspects, change management and process improvement as well as product strategy.
 
-Some of the Facebook Instant Game titles my games teams created:
+Some of our Facebook Instant Games within the last 3 years:
+* [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 8.5 Mio MAU
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) 2020 Producer: Cem Elmas, Peter Harmjanz
 * [My Little Garden](https://fb.gg/play/my-little-garden) 2020 Producer: Michael Gribbin, Ylva Mesonero
 * [Jewels Blitz](https://fb.gg/play/jewels_blitz_x) 2020 Producer: Dave Faßbender
