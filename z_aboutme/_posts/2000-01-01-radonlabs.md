@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1999-2010"
+title: "2000...2010"
 ---
 **Radon Labs**
 * Cofounder. Creative Director. 
