@@ -35,4 +35,4 @@ Some of our Facebook Instant Games within the last 3 years:
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2021-Mar-18
+Updated: 2021-Sep-04
