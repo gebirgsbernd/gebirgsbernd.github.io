@@ -28,6 +28,7 @@ Some of our Facebook Instant Games within the last 3 years:
 
 
 ### Links
+* 2021-October [Facebook "SOFTGAMES viral success with Tournaments"](https://www.facebook.com/fbgaminghome/success-stories/gaming-developers-softgames-viral-success-with-tournaments)
 * 2020-Feb-19 [pocketgamer.biz "Tripling your team - keeping your culture"](https://www.pocketgamer.biz/comment-and-opinion/72606/tripling-your-team-keeping-your-culture/)
 * 2019-Jun-03 [golem.de "30 Sekunden spielen, 30 Sekunden Werbung"](https://www.golem.de/news/hyper-casual-games-30-sekunden-spielen-30-sekunden-werbung-1906-141165.html) About Hyper Casual (German)
 *  2019-Apr-13 [t3n "Jobaussichten in der Gamesbranche waren nie besser"](https://t3n.de/news/jobaussichten-gamesbranche-waren-1156280) Interview (German)
