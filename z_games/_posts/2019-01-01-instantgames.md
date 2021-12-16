@@ -32,4 +32,4 @@ During the last 4 years we launched more than 20 new games. Selected games direc
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2021-Sep-04
+Updated: 2021-Dec-16
