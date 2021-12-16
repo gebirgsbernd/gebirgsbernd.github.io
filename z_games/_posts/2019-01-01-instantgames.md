@@ -10,7 +10,7 @@ Current position.
 I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
 My role is to build up the game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 70 people as of 2021, grow existing titles, expand to new platforms and develop new games. This includes  organisational  aspects, change management and process improvement as well as product strategy.
 
-During the last 4 years we launched more than 20 new games. Some direct playable links here:
+During the last 4 years we launched more than 20 new games. Selected games directly playable games at the links:
 * [PopIt!](https://fb.gg/play/sg_popit) 2021 Gamedesigner: Vlad Dergunov
 * [Solitaire Home Story](https://fb.gg/play/solitairehomestory) 2021 Producer: Karla Teilhaber
 * [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 8.5 Mio MAU
