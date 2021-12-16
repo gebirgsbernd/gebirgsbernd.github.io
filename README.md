@@ -25,4 +25,8 @@ Beispiel : Ein einzelnes Bild in eine Seite einbinden:
 JEKYLL Neu Installieren - schaust du hier:
 https://jekyllrb.com/docs/installation/macos/
 
+Fehlt in der Doc:
+Nach update auf RUBY 3.0 fehlt was, was bei 2.6 noch dabei war. 
+Manuell nachinstallieren  gem install webrick
+
 
