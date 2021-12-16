@@ -22,4 +22,7 @@ Beispiel : Ein einzelnes Bild in eine Seite einbinden:
 </code></pre>
 
 
+JEKYLL Neu Installieren - schaust du hier:
+https://jekyllrb.com/docs/installation/macos/
+
 
