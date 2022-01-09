@@ -2,7 +2,7 @@
 layout: post
 title: "Instant Games"
 featured-img: instant
-summary: Facebook Instant Games @ Softgames
+summary: Facebook Instant Games
 jahr: 2018 - today
 ---
 Current position.
