@@ -24,6 +24,7 @@ During the last 4 years we launched more than 20 new games with more than 10 Mio
 
 
 ### Links
+* 2022-January [Making Games "The Biggest Instant Games Production Budget So Far"] (https://drive.google.com/file/d/1Yq8R31zL1j9jDzhKp7aynfzHz7aRyQqe/view?usp=sharing)
 * 2021-October [Facebook "SOFTGAMES viral success with Tournaments"](https://www.facebook.com/fbgaminghome/success-stories/gaming-developers-softgames-viral-success-with-tournaments)
 * 2020-Feb-19 [pocketgamer.biz "Tripling your team - keeping your culture"](https://www.pocketgamer.biz/comment-and-opinion/72606/tripling-your-team-keeping-your-culture/)
 * 2019-Jun-03 [golem.de "30 Sekunden spielen, 30 Sekunden Werbung"](https://www.golem.de/news/hyper-casual-games-30-sekunden-spielen-30-sekunden-werbung-1906-141165.html) About Hyper Casual (German)
