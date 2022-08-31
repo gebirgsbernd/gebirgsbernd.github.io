@@ -14,7 +14,7 @@ During the last 4 years we launched more than 20 new games with more than 10 Mio
 * [Bubble Shooter Blitz](https://fb.gg/play/sg_bs-blitz) 2022 Gamedesigner: John Tsartsaflis
 * [PopIt!](https://fb.gg/play/sg_popit) 2021 Gamedesigner: Vlad Dergunov
 * [Solitaire Home Story](https://fb.gg/play/solitairehomestory) 2021 Producer: Karla Teilhaber
-* [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 8.5 Mio MAU
+* [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 60 Mio installs 
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) 2020 Producer: Cem Elmas, Peter Harmjanz
 * [My Little Garden](https://fb.gg/play/my-little-garden) 2020 Producer: Michael Gribbin, Ylva Mesonero
 * [Mahjong Story](https://fb.gg/play/mahjong_story_) 2019 Producer: Murillo Carvalho dos Santos
