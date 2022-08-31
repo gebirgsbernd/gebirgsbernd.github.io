@@ -11,6 +11,7 @@ I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of S
 My role is to build up the game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 70 people as of 2021, grow existing titles, expand to new platforms and develop new games. This includes  organisational  aspects, change management and process improvement as well as product strategy.
 
 During the last 4 years we launched more than 20 new games with more than 10 Mio MAU. Selected games directly playable games at the links:
+* [Bubble Shooter Blitz](https://fb.gg/play/sg_bs-blitz) 2022 Gamedesigner: John Tsartsaflis
 * [PopIt!](https://fb.gg/play/sg_popit) 2021 Gamedesigner: Vlad Dergunov
 * [Solitaire Home Story](https://fb.gg/play/solitairehomestory) 2021 Producer: Karla Teilhaber
 * [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 8.5 Mio MAU
@@ -32,4 +33,4 @@ During the last 4 years we launched more than 20 new games with more than 10 Mio
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2022-May-02
+Updated: 2022-Aug-31
