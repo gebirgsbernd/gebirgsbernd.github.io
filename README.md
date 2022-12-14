@@ -21,6 +21,11 @@ Beispiel : Ein einzelnes Bild in eine Seite einbinden:
 ![Yuneeko](/assets/yuneeko/15.jpg){: .center-image }
 </code></pre>
 
+Bild als Link
+<pre><code>
+[![Alt text for broken image link](/assets/logo.png)](https://example.com)
+<pre><code>
+
 
 JEKYLL Neu Installieren - schaust du hier:
 https://jekyllrb.com/docs/installation/macos/

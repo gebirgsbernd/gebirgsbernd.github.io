@@ -8,13 +8,14 @@ jahr: 2018 - today
 Current position.
 
 I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
-My role is to build up the game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 10 to 70 people as of 2021, grow existing titles, expand to new platforms and develop new games. This includes  organisational  aspects, change management and process improvement as well as product strategy.
+My role is to build up the game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 20 to 110 people as of 2021, grow existing titles, expand to new platforms and develop new games. This includes  organisational  aspects, change management and process improvement as well as product strategy.
 
-During the last 4 years we launched more than 20 new games with more than 10 Mio MAU. Selected games directly playable games at the links:
+During the last 4 years we launched more than 20 new instant games with more than 10 Mio MAU. Selected games directly playable games at the links:
+* [Coin Blast!](https://fb.gg/play/sg_coin_blast) 2022 Gamedesigner: Vlad Dergunov
 * [Bubble Shooter Blitz](https://fb.gg/play/sg_bs-blitz) 2022 Gamedesigner: John Tsartsaflis
 * [PopIt!](https://fb.gg/play/sg_popit) 2021 Gamedesigner: Vlad Dergunov
 * [Solitaire Home Story](https://fb.gg/play/solitairehomestory) 2021 Producer: Karla Teilhaber
-* [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 60 Mio installs 
+* [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 60 Mio installs. Number 1 Top Grossing on Facebook Instant 
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) 2020 Producer: Cem Elmas, Peter Harmjanz
 * [My Little Garden](https://fb.gg/play/my-little-garden) 2020 Producer: Michael Gribbin, Ylva Mesonero
 * [Mahjong Story](https://fb.gg/play/mahjong_story_) 2019 Producer: Murillo Carvalho dos Santos
@@ -22,6 +23,16 @@ During the last 4 years we launched more than 20 new games with more than 10 Mio
 * [Solitaire Story Tripeaks](https://fb.gg/play/solitaire_tripeaks)  2018 Producer: Alex Letov
 
 {% include image-gallery.html folder="/assets/instant" short="instant" %}
+
+Mobile Versions:
+
+[![SOLI](/assets/softgames/SOLI.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairestory)
+[![SOHO](/assets/softgames/SOHO.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairehomestory)
+[![SOFA](/assets/softgames/SOFA.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairefarmseasons)
+[![BSP](/assets/softgames/BSP.jpg)](https://play.google.com/store/apps/details?id=com.softgames.bubbleshooterpro&hl=de&gl=US)
+
+
+
 
 
 ### Links
