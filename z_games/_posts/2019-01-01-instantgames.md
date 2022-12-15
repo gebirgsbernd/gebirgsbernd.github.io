@@ -44,4 +44,4 @@ Mobile Versions:
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2022-Aug-31
+Updated: 2022-Dec-15

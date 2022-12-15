@@ -24,7 +24,7 @@ Beispiel : Ein einzelnes Bild in eine Seite einbinden:
 Bild als Link
 <pre><code>
 [![Alt text for broken image link](/assets/logo.png)](https://example.com)
-<pre><code>
+</code></pre>
 
 
 JEKYLL Neu Installieren - schaust du hier:
