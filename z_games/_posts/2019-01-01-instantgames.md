@@ -5,12 +5,10 @@ featured-img: instant
 summary: Facebook Instant Games
 jahr: 2018 - today
 ---
-Current position.
+My current position. I joined SOFTGAMES as Head of Studio in 2018. ​​Since then, I have had the privilege of building a successful game studio from scratch by assembling talented and creative agile game teams, establishing strong business intelligence and reliable services, and pivoting to a remote-first model during the pandemic. Today, SOFTGAMES is a top instant game and HTML5 developer with 120 developers and four games ranked in the top 20 grossing charts on Facebook.
 
-I joined the Instant and HTML5 game developer SOFTGAMES summer 2018 as Head of Studio.
-My role is to build up the game studio from scratch - hiring, building an organisation of  agile  game development teams, business intelligence and backend engineers from 20 to 110 people as of 2021, grow existing titles, expand to new platforms and develop new games. This includes  organisational  aspects, change management and process improvement as well as product strategy.
-
-During the last 4 years we launched more than 20 new instant games with more than 10 Mio MAU. Selected games directly playable games at the links:
+During the last 5 years we launched more than 20 new instant games on Facebook and Samsung Instant Games as well as Mobile. Selected games directly playable games at the links:
+* [Puzzle Blocks Classic](https://fb.gg/play/sg-puzzle-blocks) 2023  Producer: Peter Harmjanz
 * [Coin Blast!](https://fb.gg/play/sg_coin_blast) 2022 Gamedesigner: Vlad Dergunov
 * [Bubble Shooter Blitz](https://fb.gg/play/sg_bs-blitz) 2022 Gamedesigner: John Tsartsaflis
 * [PopIt!](https://fb.gg/play/sg_popit) 2021 Gamedesigner: Vlad Dergunov
