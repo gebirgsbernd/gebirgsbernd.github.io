@@ -26,7 +26,6 @@ Mobile Versions:
 
 [![SOLI](/assets/softgames/SOLI.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairestory)
 [![SOHO](/assets/softgames/SOHO.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairehomestory)
-[![SOFA](/assets/softgames/SOFA.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairefarmseasons)
 [![BSP](/assets/softgames/BSP.jpg)](https://play.google.com/store/apps/details?id=com.softgames.bubbleshooterpro&hl=de&gl=US)
 
 
@@ -42,4 +41,4 @@ Mobile Versions:
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2022-Dec-15
+Updated: 2023-Jun-13

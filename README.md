@@ -35,3 +35,6 @@ Nach update auf RUBY 3.0 fehlt was, was bei 2.6 noch dabei war.
 Manuell nachinstallieren  gem install webrick
 
 
+Und nur einmal im Jahr muss ich einen neuen Rechner einrichten und das REPO NEU ZIEHEN
+
+git clone https://github.com/gebirgsbernd/gebirgsbernd.github.io.git
