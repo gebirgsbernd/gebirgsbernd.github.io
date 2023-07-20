@@ -5,7 +5,7 @@ featured-img: instant
 summary: Facebook Instant Games
 jahr: 2018 - today
 ---
-My current position. I joined SOFTGAMES as Head of Studio in 2018. ​​Since then, I have had the privilege of building a successful game studio from scratch by assembling talented and creative agile game teams, establishing strong business intelligence and reliable services, and pivoting to a remote-first model during the pandemic. Today, SOFTGAMES is a top instant game and HTML5 developer with 120 developers and four games ranked in the top 20 grossing charts on Facebook.
+My current position. I joined SOFTGAMES as Head of Studio in 2018. ​​Since then, I have had the privilege of building a successful game studio from scratch by assembling talented and creative agile game teams, establishing strong business intelligence and reliable services, and pivoting to a remote-first model during the pandemic. Today, SOFTGAMES is a top instant game and HTML5 developer with 120 developers several games ranked in the top 10 grossing charts on Facebook and Samsung Instant Games.
 
 During the last 5 years we launched more than 20 new instant games on Facebook and Samsung Instant Games as well as Mobile. Selected games directly playable games at the links:
 * [Puzzle Blocks Classic](https://fb.gg/play/sg-puzzle-blocks) 2023  Producer: Peter Harmjanz
@@ -41,4 +41,4 @@ Mobile Versions:
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2023-Jun-13
+Updated: 2023-Juy-20
