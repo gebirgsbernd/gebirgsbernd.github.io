@@ -25,7 +25,6 @@ During the last 5 years we launched more than 20 new instant games on Facebook a
 Mobile Versions:
 
 [![SOLI](/assets/softgames/SOLI.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairestory)
-[![SOHO](/assets/softgames/SOHO.jpg)](https://play.google.com/store/apps/details?id=com.softgames.solitairehomestory)
 [![BSP](/assets/softgames/BSP.jpg)](https://play.google.com/store/apps/details?id=com.softgames.bubbleshooterpro&hl=de&gl=US)
 
 
@@ -41,4 +40,4 @@ Mobile Versions:
 * 2018-Aug-03  [Pocketgamer.biz "Softgames taps ex-Smilegate Europe head of studio to lead its in-house development team"](https://www.pocketgamer.biz/job-news/68711/softgames-taps-up-ex-smilegate-europe-head-of-studio/)
 
 
-Updated: 2023-Juy-20
+Updated: 2023-Aug-23
