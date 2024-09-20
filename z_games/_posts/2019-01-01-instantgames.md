@@ -12,7 +12,7 @@ During the last 5 years we launched more than 20 new instant games on Facebook a
 * [Coin Blast!](https://fb.gg/play/sg_coin_blast) 2022 Gamedesigner: Vlad Dergunov
 * [Bubble Shooter Blitz](https://fb.gg/play/sg_bs-blitz) 2022 Gamedesigner: John Tsartsaflis
 * [PopIt!](https://fb.gg/play/sg_popit) 2021 Gamedesigner: Vlad Dergunov
-* [Solitaire Home Story](https://fb.gg/play/solitairehomestory) 2021 Producer: Karla Teilhaber
+* [Solitaire Home Story](https://solitairestory.com) 2021 Producer: Karla Teilhaber
 * [Bubble Shooter Pro](https://fb.gg/play/sg_bs-pro) 2021 Created by Andre Krug - A viral blockbuster with 60 Mio installs. Number 1 Top Grossing on Facebook Instant 
 * [Solitaire Farm Seasons](https://fb.gg/play/solifarm) 2020 Producer: Cem Elmas, Peter Harmjanz
 * [My Little Garden](https://fb.gg/play/my-little-garden) 2020 Producer: Michael Gribbin, Ylva Mesonero
