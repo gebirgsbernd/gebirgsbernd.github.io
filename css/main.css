@@ -14,8 +14,21 @@ body {
 }
 h1 {
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.5em;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+h2 {
+    color: #bbbbbb;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.0em;
     font-family: 'Darker Grotesque', sans-serif;
 }
 
