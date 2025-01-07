@@ -38,7 +38,14 @@ title: Bernd Beyreuther. Game Producer.
         My CV @ LinkedIn
         </a>
         </li>
-            
+        
+        
+        {% for post in site.categories.z_aboutme %}
+        <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        
         <li>
         <a href="https://www.mobygames.com/developer/sheet/view/developerId,117427/">
         My trackrecord at Mobygames.
