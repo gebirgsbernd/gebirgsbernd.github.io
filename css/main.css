@@ -131,10 +131,11 @@ p {
 
 
 .post {
-    border-radius: 5px;
+    border-radius: 7px;
     background: #eeeeee;
     padding: 0px;
     margin: 3%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 @media only screen and (max-width: 600px){
     .post{
@@ -148,6 +149,7 @@ p {
 .post:hover {
     background: #f8f8f8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+    transform: scale(1.07); /* Vergrößert das Element leicht */
 }
 
 
@@ -294,10 +296,11 @@ p {
 }
 
 img.hover-shadow {
-  transition: 0.1s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 .hover-shadow:hover {
   background: #f8f8f8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
   cursor: pointer;
+  transform: scale(1.04); /* Vergrößert das Element leicht */
 }
