@@ -1,82 +1,927 @@
----
-layout: default
-title: Bernd Beyreuther. Game Producer.
----
-<style>
-    img {
-    max-width:100%;
-    margin: 0px;
-    }
-</style>
-<picture>
-    <source srcset="{{ site.url }}{{ site.baseurl }}/assets/header/main.jpg" media="(max-width: 600px)">
-    <source srcset="{{ site.url }}{{ site.baseurl }}/assets/header/main_hero.jpg">
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/header/main_hero.jpg" style="width:100%;">
-</picture>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernd Beyreuther.  Making Games.</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/vt323@5.2.6/index.css">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 32px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+        .page-header-image {
+            width: calc(100% + 64px);
+            margin: -32px -32px 0 -32px;
+            aspect-ratio: 1600 / 500;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+        }
+        .main-page-header {
+            width: calc(100% + 64px);
+            margin: -32px -32px 0 -32px;
+            height: clamp(307px, 44.92vw, 460px);
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(to right, #008DC7 0%, #ffffff 100%);
+            box-shadow: none;
+            position: relative;
+        }
+        .main-page-header-inner {
+            width: 1600px;
+            height: 100%;
+            background-size: auto 100%;
+            background-position: left top;
+            background-repeat: no-repeat;
+        }
+        .main-page-title-overlay {
+            position: absolute;
+            left: clamp(165px, 24.22vw, 248px);
+            bottom: clamp(73px, 10.74vw, 110px);
+            width: clamp(230px, 33vw, 340px);
+            z-index: 2;
+            color: #ffffff;
+            font-size: clamp(20px, 2.93vw, 30px);
+            font-weight: 400;
+            line-height: 1.08;
+            letter-spacing: 0.02em;
+            font-family: "VT323", "Lucida Console", Monaco, monospace;
+            text-shadow: 0 0 4px rgba(255, 255, 255, 0.22), 0 0 10px rgba(255, 255, 255, 0.10);
+            pointer-events: auto;
+            cursor: text;
+            white-space: pre;
+            filter: brightness(1.02);
+            animation: main-page-crt-flicker 0.16s steps(2, end) infinite;
+            will-change: transform, text-shadow, filter;
+            outline: none;
+            user-select: none;
+        }
+        .main-page-title-overlay div + div {
+            margin-top: 4px;
+        }
+        .main-page-title-overlay::before,
+        .main-page-title-overlay::after {
+            content: none;
+        }
+        .main-page-title-overlay.is-crt-hover {
+            animation:
+                main-page-crt-hover-flicker 0.12s steps(2, end) 1,
+                main-page-crt-hover-jitter 0.24s steps(4, end) 1,
+                main-page-crt-hover-skew 0.24s steps(4, end) 1,
+                main-page-crt-hover-horizontal-tear 0.24s steps(4, end) 1,
+                main-page-crt-hover-tear 0.24s steps(3, end) 1;
+            filter: brightness(1.04) contrast(1.05);
+            text-shadow:
+                -1px 0 rgba(255, 0, 80, 0.22),
+                1px 0 rgba(0, 255, 255, 0.22),
+                0 0 4px rgba(255, 255, 255, 0.16),
+                0 0 8px rgba(255, 255, 255, 0.08);
+        }
+        .main-page-title-overlay.is-crt-hover::after {
+            content: none;
+        }
+        .main-page-title-line {
+            min-height: 1.08em;
+        }
+        .main-page-title-overlay:focus {
+            text-shadow:
+                0 0 6px rgba(255, 255, 255, 0.26),
+                0 0 14px rgba(255, 255, 255, 0.14);
+        }
+        .main-page-title-line,
+        .main-page-title-cursor {
+            position: relative;
+        }
+        .main-page-title-line::after,
+        .main-page-title-cursor::after {
+            content: none;
+        }
+        .main-page-title-cursor {
+            position: absolute;
+            display: inline-block;
+            width: 0.5em;
+            height: 0.95em;
+            background: #ffffff;
+            vertical-align: baseline;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+            animation: main-page-cursor-blink 0.8s steps(1, end) infinite;
+        }
+        @keyframes main-page-cursor-blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        @keyframes main-page-crt-flicker {
+            0%   { opacity: 0.96; }
+            25%  { opacity: 1.00; }
+            50%  { opacity: 0.97; }
+            75%  { opacity: 0.99; }
+            100% { opacity: 0.98; }
+        }
+        @keyframes main-page-crt-hover-flicker {
+            0%   { opacity: 1.00; }
+            30%  { opacity: 0.96; }
+            65%  { opacity: 0.99; }
+            100% { opacity: 1.00; }
+        }
+        @keyframes main-page-crt-hover-jitter {
+            0%   { transform: translate(0px, 0px); }
+            20%  { transform: translate(-1px, 0px); }
+            40%  { transform: translate(1px, 0px); }
+            60%  { transform: translate(-1px, 0px); }
+            80%  { transform: translate(1px, 0px); }
+            100% { transform: translate(0px, 0px); }
+        }
+        @keyframes main-page-crt-hover-skew {
+            0%   { clip-path: inset(0 0 0 0); }
+            35%  { clip-path: inset(1px 0 0 0); }
+            70%  { clip-path: inset(0 0 1px 0); }
+            100% { clip-path: inset(0 0 0 0); }
+        }
+        @keyframes main-page-crt-hover-horizontal-tear {
+            0% {
+                clip-path: inset(0 0 0 0);
+                transform: translateX(0);
+            }
+            32% {
+                clip-path: polygon(0 42%, 100% 42%, 100% 44%, 0 44%);
+                transform: translateX(-1px);
+            }
+            58% {
+                clip-path: polygon(0 68%, 100% 68%, 100% 70%, 0 70%);
+                transform: translateX(1px);
+            }
+            100% {
+                clip-path: inset(0 0 0 0);
+                transform: translateX(0);
+            }
+        }
+        @keyframes main-page-crt-hover-tear {
+            0%   { filter: brightness(1.04) contrast(1.05); }
+            45%  { filter: brightness(1.06) contrast(1.07); }
+            100% { filter: brightness(1.04) contrast(1.05); }
+        }
+        @keyframes main-page-crt-hover-rgb {
+            0%   { transform: translate(0px, 0px); opacity: 0.0; }
+            10%  { transform: translate(-2px, 0px); opacity: 0.75; }
+            22%  { transform: translate(2px, 0px); opacity: 0.45; }
+            36%  { transform: translate(-1px, 0px); opacity: 0.82; }
+            52%  { transform: translate(3px, 0px); opacity: 0.38; }
+            68%  { transform: translate(-2px, 0px); opacity: 0.70; }
+            84%  { transform: translate(1px, 0px); opacity: 0.30; }
+            100% { transform: translate(0px, 0px); opacity: 0.0; }
+        }
+        @keyframes main-page-crt-hover-noise {
+            0%   { clip-path: inset(0 0 0 0); }
+            12%  { clip-path: polygon(0 0, 100% 0, 100% 16%, 0 10%); }
+            26%  { clip-path: polygon(0 22%, 100% 18%, 100% 40%, 0 36%); }
+            39%  { clip-path: polygon(0 44%, 100% 40%, 100% 58%, 0 62%); }
+            54%  { clip-path: polygon(0 60%, 100% 56%, 100% 74%, 0 78%); }
+            70%  { clip-path: polygon(0 74%, 100% 72%, 100% 88%, 0 92%); }
+            100% { clip-path: inset(0 0 0 0); }
+        }
+        h1 {
+            margin: -42px 0 24px 0;
+            font-size: 34px;
+            font-weight: 700;
+        }
+        .folder-section {
+            margin-top: 40px;
+        }
+        .folder-section:first-of-type {
+            margin-top: 0;
+        }
+        h2 {
+            margin: 0 0 8px 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .section-description {
+            margin: 0 0 20px 0;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #555;
+        }
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 18px;
+            align-items: stretch;
+        }
+        @media (max-width: 2200px) {
+            .folder-grid {
+                grid-template-columns: repeat(6, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 1760px) {
+            .folder-grid {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 1320px) {
+            .folder-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 880px) {
+            .folder-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        .folder-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 7px;
+            background: #e9e9e9;
+            color: #222;
+            text-decoration: none;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.10);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        .folder-card:hover {
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+        }
+        .folder-card-image {
+            width: 100%;
+            aspect-ratio: 2 / 1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #d0d0d0;
+        }
+        .folder-card-image.placeholder {
+            background: #cfcfcf;
+        }
+        .folder-card-text {
+            padding: 18px 20px 18px 20px;
+        }
+        .folder-card-meta {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #8a8a8a;
+            margin-bottom: 8px;
+            letter-spacing: 0;
+        }
+        .folder-card-title {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.2;
+            word-break: break-word;
+            color: #6f6f6f;
+            margin: 0;
+        }
+        .folder-card-subtitle {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #8a8a8a;
+            margin-top: 8px;
+        }
+        .tab-bar {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 10;
+            margin-top: -52px;
+            margin-bottom: 28px;
+            padding: 0 8px;
+        }
+        .tab-button {
+            padding: 10px 22px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #222;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s ease, color 0.15s ease;
+            font-family: inherit;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+        .tab-button:hover {
+            background: rgba(255, 255, 255, 0.80);
+            color: #111;
+        }
+        .tab-button.active {
+            background: #006B99;
+            color: #fff;
+        }
+        .tab-panel {
+            display: block;
+        }
+        .tab-panel.hidden {
+            display: none;
+        }
+        .footer-timestamp {
+            margin-top: 28px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header-image main-page-header"><div class="main-page-header-inner" style="background-image: url('headermain.png')"></div><div class="main-page-title-overlay" id="mainPageTitleOverlay" tabindex="0" role="textbox" aria-label="Header console"><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><span class="main-page-title-cursor" id="mainPageTitleCursor"></span></div></div>
+    <div class="tab-bar"><button class="tab-button active" data-tab="tab-A">Trackrecord</button>
+<button class="tab-button" data-tab="tab-misc">Misc</button>
+<button class="tab-button" data-tab="tab-D">CV</button></div>
+<div class="tab-content"><div class="tab-panel" id="tab-A"><section class="folder-section">
+    <h2>Stuff I Made (happen)</h2>
+    <p class="section-description">I build game studios and make games. Currently working as VP Operations at Softgames Berlin. Below you will find some of my game productions worth mentioning from the past 40 years.</p>
+    <div class="folder-grid">
+        <a class="folder-card" href="./A09_soho.html">
+    <div class="folder-card-image" style="background-image: url('./A09_soho/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2018-2025</div>
+<div class="folder-card-title">Solitaire Home Story</div>
+<div class="folder-card-subtitle">...and other Casual Games</div>
+    </div>
+</a>
+<a class="folder-card" href="./A08_yuneeko.html">
+    <div class="folder-card-image" style="background-image: url('./A08_yuneeko/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2017</div>
+<div class="folder-card-title">Yuneeko</div>
+<div class="folder-card-subtitle">Mobile story game</div>
+    </div>
+</a>
+<a class="folder-card" href="./A07_drakensang-online.html">
+    <div class="folder-card-image" style="background-image: url('./A07_drakensang-online/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2010-2013</div>
+<div class="folder-card-title">Drakensang Online</div>
+<div class="folder-card-subtitle">MMO Hack&amp;Slay</div>
+    </div>
+</a>
+<a class="folder-card" href="./A06_drakensang.html">
+    <div class="folder-card-image" style="background-image: url('./A06_drakensang/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2008-2010</div>
+<div class="folder-card-title">Drakensang The Dark Eye</div>
+<div class="folder-card-subtitle">Story driven party RPG</div>
+    </div>
+</a>
+<a class="folder-card" href="./A05_horsegames.html">
+    <div class="folder-card-image" style="background-image: url('./A05_horsegames/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2005-2010</div>
+<div class="folder-card-title">Paws &amp; Claws Pet Vet</div>
+<div class="folder-card-subtitle">...and many other horse games</div>
+    </div>
+</a>
+<a class="folder-card" href="./A04_genius.html">
+    <div class="folder-card-image" style="background-image: url('./A04_genius/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2004-2005</div>
+<div class="folder-card-title">Genius</div>
+<div class="folder-card-subtitle">Educational Simulation</div>
+    </div>
+</a>
+<a class="folder-card" href="./A03_projectnomads.html">
+    <div class="folder-card-image" style="background-image: url('./A03_projectnomads/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2002</div>
+<div class="folder-card-title">Project Nomads</div>
+<div class="folder-card-subtitle">Action</div>
+    </div>
+</a>
+<a class="folder-card" href="./A02_urbanassault.html">
+    <div class="folder-card-image" style="background-image: url('./A02_urbanassault/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1998</div>
+<div class="folder-card-title">Urban Assault</div>
+<div class="folder-card-subtitle">PC Action-Strategy</div>
+    </div>
+</a>
+<a class="folder-card" href="./A01_jungle.html">
+    <div class="folder-card-image" style="background-image: url('./A01_jungle/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1989</div>
+<div class="folder-card-title">Jungle</div>
+<div class="folder-card-subtitle">2D Jump &amp; Run</div>
+    </div>
+</a>
+    </div>
+</section></div>
+<div class="tab-panel hidden" id="tab-misc"><section class="folder-section">
+    <h2>Bits & Pieces</h2>
+    <p class="section-description">Concepts, prototypes, unreleased games. It’s part of everyday game development that projects get canceled and ideas don’t find funding. Out of dozens of canceled projects, some of my never-realized concepts, prototypes, and unreleased games can be found here. These are especially noteworthy projects close to my heart that I still cherish today.</p>
+    <div class="folder-grid">
+        <a class="folder-card" href="./B04_szb.html">
+    <div class="folder-card-image" style="background-image: url('./B04_szb/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2002-2006</div>
+<div class="folder-card-title">Schwarzenberg</div>
+<div class="folder-card-subtitle">Stealth Action</div>
+    </div>
+</a>
+<a class="folder-card" href="./B03_godsend.html">
+    <div class="folder-card-image" style="background-image: url('./B03_godsend/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2009</div>
+<div class="folder-card-title">Godsend</div>
+<div class="folder-card-subtitle">Console Action RPG</div>
+    </div>
+</a>
+<a class="folder-card" href="./B02_mika.html">
+    <div class="folder-card-image" style="background-image: url('./B02_mika/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2009</div>
+<div class="folder-card-title">Mika the polar bear</div>
+<div class="folder-card-subtitle">Animal Care Adventure NDS</div>
+    </div>
+</a>
+<a class="folder-card" href="./B01_drakensang3.html">
+    <div class="folder-card-image placeholder"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2010</div>
+<div class="folder-card-title">Drakensang 3</div>
+<div class="folder-card-subtitle">... soon more info will be added here...</div>
+    </div>
+</a>
+    </div>
+</section>
+<section class="folder-section">
+    <h2>More than code and pixels</h2>
+    <p class="section-description">While I mostly build games – sometimes it’s a comic strip, an animated short, or a mobile app. These are my non-game projects, born from pure curiosity and the joy of simply making things.</p>
+    <div class="folder-grid">
+        <a class="folder-card" href="./C03_taschenrechner.html">
+    <div class="folder-card-image" style="background-image: url('./C03_taschenrechner/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1989</div>
+<div class="folder-card-title">Jungle</div>
+<div class="folder-card-subtitle">2D Jump &amp; Run</div>
+    </div>
+</a>
+<a class="folder-card" href="./C02_gutenappetit.html">
+    <div class="folder-card-image placeholder"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1995</div>
+<div class="folder-card-title">Guten Appetit</div>
+<div class="folder-card-subtitle">3D animated short. My thesis</div>
+    </div>
+</a>
+<a class="folder-card" href="./C01_socke.html">
+    <div class="folder-card-image placeholder"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1990</div>
+<div class="folder-card-title">Socke</div>
+<div class="folder-card-subtitle">Newspaper cartoon series</div>
+    </div>
+</a>
+    </div>
+</section></div>
+<div class="tab-panel hidden" id="tab-D"><section class="folder-section">
+    <h2>Where I’ve Been</h2>
+    <p class="section-description">A look at the studios I helped build, the company I founded, and the places I’ve worked along the way.</p>
+    <div class="folder-grid">
+        <a class="folder-card" href="./D06_softgames.html">
+    <div class="folder-card-image" style="background-image: url('./D06_softgames/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2018 - today</div>
+<div class="folder-card-title">SOFTGAMES</div>
+<div class="folder-card-subtitle">Instant Games</div>
+    </div>
+</a>
+<a class="folder-card" href="./D05_f2proadtrip.html">
+    <div class="folder-card-image" style="background-image: url('./D05_f2proadtrip/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2014-2018</div>
+<div class="folder-card-title">Mobile Roadtrip</div>
+<div class="folder-card-subtitle">KING AERIAGAMES SMILEGATE</div>
+    </div>
+</a>
+<a class="folder-card" href="./D04_bigpoint.html">
+    <div class="folder-card-image" style="background-image: url('./D04_bigpoint/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">2010-2013</div>
+<div class="folder-card-title">BIGPOINT</div>
+<div class="folder-card-subtitle">Free 2 Play !</div>
+    </div>
+</a>
+<a class="folder-card" href="./D03_radonlabs.html">
+    <div class="folder-card-image placeholder"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1998-2010</div>
+<div class="folder-card-title">Radon Labs</div>
+<div class="folder-card-subtitle">My Company</div>
+    </div>
+</a>
+<a class="folder-card" href="./D02_terratools.html">
+    <div class="folder-card-image" style="background-image: url('./D02_terratools/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1995-1998</div>
+<div class="folder-card-title">Terratools</div>
+<div class="folder-card-subtitle">Microsoft</div>
+    </div>
+</a>
+<a class="folder-card" href="./D01_ddr.html">
+    <div class="folder-card-image" style="background-image: url('./D01_ddr/icon.jpg')"></div>
+    <div class="folder-card-text">
+        <div class="folder-card-meta">1989-1994</div>
+<div class="folder-card-title">EastGermany</div>
+<div class="folder-card-subtitle">And the early 90s</div>
+    </div>
+</a>
+    </div>
+</section></div></div>
+    <div class="footer-timestamp">Updated: 2026-Jun-16</div>
+    <script>
+        (function () {
+            const buttons = Array.from(document.querySelectorAll(".tab-button"));
+            const panels = Array.from(document.querySelectorAll(".tab-panel"));
 
-<main class="site_content">
-    <section class="contentbox">
-        <span style="font-size:1.5em;">Track Record </span>
-        <br>
-        
-        <div class="gridcontainer">
-        {% for post in site.categories.z_games %}
-        {% include card.html %}
-        {% endfor %}
-        </div><!-- /.gridcontainer -->
-    </section>
-    <section class="contentbox">
-        <span style="font-size:1.5em;">About me.</span>
-        <p>
-        I build game studios and make games.
-        <br>
-        Currently working as Head of Studio at Softgames. Located in Berlin.
-        <br>
-        <ul>
-        <li>
-        <a href="https://www.linkedin.com/in/berndbeyreuther/">
-        My CV @ LinkedIn
-        </a>
-        </li>
-        
-        
-        {% for post in site.categories.z_aboutme %}
-        <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-        
-        <li>
-        <a href="https://www.mobygames.com/person/117427/bernd-beyreuther/">
-        My trackrecord at Mobygames.
-        </a>
-        (Games until 2011)
-        </li>
-        </ul>
-         </p>
-    </section>
-    <section class="contentbox">
-        <span style="font-size:1.5em;">Concepts, prototypes, unreleased games.</span>
-        <p>
-        It’s part of everyday game development that projects get canceled and ideas don’t find funding. Out of dozens of canceled projects, some of my never-realized concepts, prototypes, and unreleased games can be found here. These are especially noteworthy projects close to my heart that I still cherish today.
-        </p>
-        <div class="gridcontainer">
-        {% for post in site.categories.z_concepts reversed %}
-        {% include card.html %}
-        {% endfor %}
-        </div><!-- /.gridcontainer -->
-    </section>
-    <section class="contentbox">
-        <span style="font-size:1.5em;">Non game related stuff.</span>
-        <div class="gridcontainer">
-        {% for post in site.categories.z_other %}
-        {% include card.html %}
-        {% endfor %}
-        </div><!-- /.gridcontainer -->
-    </section>
-</main>
+            function activateTab(targetId) {
+                buttons.forEach(btn => btn.classList.toggle("active", btn.dataset.tab === targetId));
+                panels.forEach(panel => {
+                    panel.classList.toggle("hidden", panel.id !== targetId);
+                });
+                try { sessionStorage.setItem("activeTab", targetId); } catch(e) {}
+            }
 
-<footer>
-    <div style="font-size:0.7em; color:#aaaaaa;"> Updated: 2026-Jan-15</div>
-</footer>
+            window.activateTab = activateTab;
 
+            buttons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    activateTab(btn.dataset.tab);
+                    btn.blur();
+                });
+            });
+
+            const savedTab = (function() {
+                try { return sessionStorage.getItem("activeTab"); } catch(e) { return null; }
+            })();
+            const hash = location.hash.replace("#", "");
+            const initialTab = (hash && document.getElementById(hash)) ? hash : savedTab;
+            if (initialTab && document.getElementById(initialTab)) {
+                activateTab(initialTab);
+            }
+        })();
+    </script>
+    <script>
+        const mainPageTitleOverlay = document.getElementById("mainPageTitleOverlay");
+        const mainPageTitleLines = mainPageTitleOverlay
+            ? Array.from(mainPageTitleOverlay.querySelectorAll(".main-page-title-line"))
+            : [];
+        const mainPageTitleCursor = document.getElementById("mainPageTitleCursor");
+
+        let mainPageTitleHoverTimeout = null;
+        let mainPageConsoleLines = ["", "", "", "", "", "", "", "", ""];
+        let mainPageCursorLineIndex = 0;
+        let mainPageCursorCharIndex = 0;
+        const mainPageBootLines = ["", "", "", "BERND BEYREUTHER", "MAKING GAMES SINCE 1989", "PERSONAL WEBSITE"];
+        let mainPageConsoleInputEnabled = false;
+        let mainPageBootTimeouts = [];
+        function clearMainPageBootTimeouts() {
+            mainPageBootTimeouts.forEach(timeoutId => {
+                window.clearTimeout(timeoutId);
+            });
+            mainPageBootTimeouts = [];
+        }
+
+        function startMainPageBootSequence() {
+            if (!mainPageTitleOverlay || !mainPageTitleCursor || !mainPageTitleLines.length) { return; }
+
+            clearMainPageBootTimeouts();
+            mainPageConsoleInputEnabled = false;
+            mainPageConsoleLines = Array(mainPageTitleLines.length).fill("");
+            mainPageCursorLineIndex = 0;
+            mainPageCursorCharIndex = 0;
+            renderMainPageConsole();
+
+            const baseCharDelay = 82;
+            const linePause = 360;
+            let accumulatedDelay = 0;
+
+            mainPageBootLines.forEach((fullText, lineIndex) => {
+                for (let charIndex = 0; charIndex <= fullText.length; charIndex += 1) {
+                    const currentChar = fullText.charAt(Math.max(0, charIndex - 1));
+                    const randomJitter = Math.floor(Math.random() * 55);
+                    const punctuationPause = ",.:;!?".includes(currentChar) ? 90 : 0;
+                    const spacePause = currentChar === " " ? 28 : 0;
+                    accumulatedDelay += baseCharDelay + randomJitter + punctuationPause + spacePause;
+                    const timeoutId = window.setTimeout(() => {
+                        mainPageCursorLineIndex = lineIndex;
+                        mainPageCursorCharIndex = charIndex;
+                        mainPageConsoleLines[lineIndex] = fullText.slice(0, charIndex);
+                        renderMainPageConsole();
+                    }, accumulatedDelay);
+                    mainPageBootTimeouts.push(timeoutId);
+                }
+
+                accumulatedDelay += linePause;
+            });
+
+            const finishTimeoutId = window.setTimeout(() => {
+                mainPageConsoleLines = mainPageBootLines.concat(Array(Math.max(0, mainPageTitleLines.length - mainPageBootLines.length)).fill(""));
+                mainPageCursorLineIndex = Math.min(mainPageBootLines.length, mainPageTitleLines.length - 1);
+                mainPageCursorCharIndex = 0;
+                renderMainPageConsole();
+                mainPageConsoleInputEnabled = true;
+                if (mainPageTitleOverlay) {
+                    mainPageTitleOverlay.focus();
+                }
+            }, accumulatedDelay + 40);
+            mainPageBootTimeouts.push(finishTimeoutId);
+        }
+
+        // Animated, line-by-line typewriter output that scrolls the console
+        // upward once it reaches the bottom row. Disables input while typing.
+        function typeMainPageLines(outputLines, onComplete) {
+            if (!mainPageTitleOverlay || !mainPageTitleLines.length) { return; }
+
+            clearMainPageBootTimeouts();
+            mainPageConsoleInputEnabled = false;
+
+            const total = mainPageTitleLines.length;
+            const baseCharDelay = 40;
+            const linePause = 220;
+            let accumulatedDelay = 0;
+
+            function pushNewBottomLine() {
+                mainPageConsoleLines.push("");
+                while (mainPageConsoleLines.length > total) {
+                    mainPageConsoleLines.shift();
+                }
+                mainPageCursorLineIndex = total - 1;
+                mainPageCursorCharIndex = 0;
+                renderMainPageConsole();
+            }
+
+            outputLines.forEach((fullText) => {
+                accumulatedDelay += linePause;
+                const startId = window.setTimeout(pushNewBottomLine, accumulatedDelay);
+                mainPageBootTimeouts.push(startId);
+
+                for (let charIndex = 1; charIndex <= fullText.length; charIndex += 1) {
+                    const currentChar = fullText.charAt(charIndex - 1);
+                    const randomJitter = Math.floor(Math.random() * 35);
+                    const spacePause = currentChar === " " ? 18 : 0;
+                    accumulatedDelay += baseCharDelay + randomJitter + spacePause;
+                    const ci = charIndex;
+                    const id = window.setTimeout(() => {
+                        mainPageConsoleLines[total - 1] = fullText.slice(0, ci);
+                        mainPageCursorCharIndex = ci;
+                        renderMainPageConsole();
+                    }, accumulatedDelay);
+                    mainPageBootTimeouts.push(id);
+                }
+            });
+
+            accumulatedDelay += linePause;
+            const finishId = window.setTimeout(() => {
+                pushNewBottomLine();
+                mainPageConsoleInputEnabled = true;
+                if (mainPageTitleOverlay) { mainPageTitleOverlay.focus(); }
+                if (typeof onComplete === "function") { onComplete(); }
+            }, accumulatedDelay);
+            mainPageBootTimeouts.push(finishId);
+        }
+
+        function triggerMainPageTitleHoverEffect() {
+            if (!mainPageTitleOverlay) { return; }
+
+            mainPageTitleOverlay.classList.remove("is-crt-hover");
+            void mainPageTitleOverlay.offsetWidth;
+            mainPageTitleOverlay.classList.add("is-crt-hover");
+
+            if (mainPageTitleHoverTimeout) {
+                window.clearTimeout(mainPageTitleHoverTimeout);
+            }
+
+            mainPageTitleHoverTimeout = window.setTimeout(() => {
+                mainPageTitleOverlay.classList.remove("is-crt-hover");
+                mainPageTitleHoverTimeout = null;
+            }, 260);
+        }
+
+        function setMainPageTitleCursorPosition(lineIndex, charIndex) {
+            if (!mainPageTitleOverlay || !mainPageTitleCursor || !mainPageTitleLines.length) { return; }
+
+            const safeLineIndex = Math.max(0, Math.min(lineIndex, mainPageTitleLines.length - 1));
+            const line = mainPageTitleLines[safeLineIndex];
+            const renderedText = line.textContent || "";
+            const safeCharIndex = Math.max(0, Math.min(charIndex, renderedText.length));
+
+            const probe = document.createElement("span");
+            probe.style.visibility = "hidden";
+            probe.style.position = "absolute";
+            probe.style.whiteSpace = "pre";
+            probe.style.font = window.getComputedStyle(line).font;
+            probe.style.letterSpacing = window.getComputedStyle(line).letterSpacing;
+            probe.textContent = renderedText.slice(0, safeCharIndex) || "";
+            line.appendChild(probe);
+
+            const lineRect = line.getBoundingClientRect();
+            const probeRect = probe.getBoundingClientRect();
+            const overlayRect = mainPageTitleOverlay.getBoundingClientRect();
+            const offsetLeft = probeRect.width;
+            const offsetTop = lineRect.top - overlayRect.top + (lineRect.height - mainPageTitleCursor.offsetHeight) / 2;
+
+            mainPageTitleCursor.style.left = `${offsetLeft}px`;
+            mainPageTitleCursor.style.top = `${Math.max(0, offsetTop)}px`;
+
+            probe.remove();
+        }
+
+        function renderMainPageConsole() {
+            if (!mainPageTitleOverlay || !mainPageTitleLines.length) { return; }
+
+            const visibleLines = mainPageConsoleLines.slice(-mainPageTitleLines.length);
+            const paddedLines = Array(Math.max(0, mainPageTitleLines.length - visibleLines.length)).fill("").concat(visibleLines);
+
+            mainPageTitleLines.forEach((line, index) => {
+                line.textContent = paddedLines[index] || "";
+            });
+
+            const safeCursorLineIndex = Math.max(0, Math.min(mainPageCursorLineIndex, mainPageTitleLines.length - 1));
+            setMainPageTitleCursorPosition(safeCursorLineIndex, mainPageCursorCharIndex);
+        }
+
+        function appendMainPageConsoleText(text) {
+            if (!mainPageConsoleLines.length) {
+                mainPageConsoleLines = Array(mainPageTitleLines.length).fill("");
+            }
+
+            const targetLineIndex = Math.max(0, Math.min(mainPageCursorLineIndex, mainPageConsoleLines.length - 1));
+            const currentLine = mainPageConsoleLines[targetLineIndex] || "";
+            const safeCharIndex = Math.max(0, Math.min(mainPageCursorCharIndex, currentLine.length));
+            const uppercaseText = String(text).toUpperCase();
+
+            mainPageConsoleLines[targetLineIndex] = currentLine.slice(0, safeCharIndex) + uppercaseText + currentLine.slice(safeCharIndex);
+            mainPageCursorLineIndex = targetLineIndex;
+            mainPageCursorCharIndex = safeCharIndex + uppercaseText.length;
+            renderMainPageConsole();
+        }
+
+        function backspaceMainPageConsoleText() {
+            if (!mainPageConsoleLines.length) {
+                mainPageConsoleLines = Array(mainPageTitleLines.length).fill("");
+            }
+
+            const targetLineIndex = Math.max(0, Math.min(mainPageCursorLineIndex, mainPageConsoleLines.length - 1));
+            const currentLine = mainPageConsoleLines[targetLineIndex] || "";
+
+            if (mainPageCursorCharIndex > 0) {
+                const safeCharIndex = Math.min(mainPageCursorCharIndex, currentLine.length);
+                mainPageConsoleLines[targetLineIndex] = currentLine.slice(0, safeCharIndex - 1) + currentLine.slice(safeCharIndex);
+                mainPageCursorCharIndex = safeCharIndex - 1;
+                renderMainPageConsole();
+                return;
+            }
+
+            if (targetLineIndex > 0) {
+                const previousLine = mainPageConsoleLines[targetLineIndex - 1] || "";
+                mainPageConsoleLines[targetLineIndex - 1] = previousLine + currentLine;
+                mainPageConsoleLines.splice(targetLineIndex, 1);
+                while (mainPageConsoleLines.length < mainPageTitleLines.length) {
+                    mainPageConsoleLines.unshift("");
+                }
+                if (mainPageConsoleLines.length > mainPageTitleLines.length) {
+                    mainPageConsoleLines = mainPageConsoleLines.slice(-mainPageTitleLines.length);
+                }
+                mainPageCursorLineIndex = Math.max(0, targetLineIndex - 1);
+                mainPageCursorCharIndex = previousLine.length;
+                renderMainPageConsole();
+            }
+        }
+
+        function newlineMainPageConsoleText() {
+            if (!mainPageConsoleLines.length) {
+                mainPageConsoleLines = Array(mainPageTitleLines.length).fill("");
+            }
+
+            const targetLineIndex = Math.max(0, Math.min(mainPageCursorLineIndex, mainPageConsoleLines.length - 1));
+            const currentLine = mainPageConsoleLines[targetLineIndex] || "";
+            const safeCharIndex = Math.max(0, Math.min(mainPageCursorCharIndex, currentLine.length));
+            const before = currentLine.slice(0, safeCharIndex);
+            const after = currentLine.slice(safeCharIndex);
+            const command = before.trim().toUpperCase();
+
+            if (command === "CLS") {
+                mainPageConsoleLines = Array(mainPageTitleLines.length).fill("");
+                mainPageCursorLineIndex = 0;
+                mainPageCursorCharIndex = 0;
+                renderMainPageConsole();
+                return;
+            }
+
+            if (command === "RESTART") {
+                startMainPageBootSequence();
+                return;
+            }
+
+            if (command === "HELP") {
+                const helpLines = [
+                    "TRACKRECORD  - show trackrecord tab",
+                    "MISC         - show misc tab",
+                    "CV           - show cv tab",
+                    "CLS          - clear screen",
+                    "RESTART      - replay boot sequence",
+                    "HELP         - show this help",
+                ];
+                mainPageConsoleLines[targetLineIndex] = before;
+                renderMainPageConsole();
+                typeMainPageLines(helpLines);
+                return;
+            }
+
+            if (command === "TRACKRECORD") {
+                if (typeof window.activateTab === "function") { window.activateTab("tab-A"); }
+            }
+
+            if (command === "MISC") {
+                if (typeof window.activateTab === "function") { window.activateTab("tab-misc"); }
+            }
+
+            if (command === "CV") {
+                if (typeof window.activateTab === "function") { window.activateTab("tab-D"); }
+            }
+
+            mainPageConsoleLines[targetLineIndex] = before;
+            mainPageConsoleLines.splice(targetLineIndex + 1, 0, after);
+
+            if (mainPageConsoleLines.length > mainPageTitleLines.length) {
+                const overflow = mainPageConsoleLines.length - mainPageTitleLines.length;
+                mainPageConsoleLines.splice(0, overflow);
+                mainPageCursorLineIndex = Math.min(mainPageTitleLines.length - 1, targetLineIndex + 1 - overflow);
+            } else {
+                mainPageCursorLineIndex = Math.min(mainPageTitleLines.length - 1, targetLineIndex + 1);
+            }
+
+            mainPageCursorCharIndex = 0;
+            renderMainPageConsole();
+        }
+
+        window.addEventListener("load", () => {
+            startMainPageBootSequence();
+            if (mainPageTitleOverlay) {
+                mainPageTitleOverlay.addEventListener("click", () => {
+                    if (mainPageConsoleInputEnabled) {
+                        const lastLine = mainPageTitleLines.length - 1;
+                        mainPageCursorLineIndex = lastLine;
+                        const currentLine = mainPageConsoleLines[lastLine] || "";
+                        mainPageCursorCharIndex = currentLine.length;
+                        renderMainPageConsole();
+                        mainPageTitleOverlay.focus();
+                    }
+                });
+                mainPageTitleOverlay.addEventListener("mouseenter", () => {
+                    triggerMainPageTitleHoverEffect();
+                });
+            }
+
+            // Console input is captured globally, independent of focus, so that
+            // switching tabs (which can move focus to a button/link) never kills typing.
+            document.addEventListener("keydown", (event) => {
+                if (!mainPageConsoleInputEnabled) { return; }
+
+                // Don't hijack keys meant for real controls (buttons, links, form fields).
+                const active = document.activeElement;
+                if (active && active !== mainPageTitleOverlay) {
+                    const tag = active.tagName;
+                    if (tag === "BUTTON" || tag === "A" || tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
+                        return;
+                    }
+                }
+
+                const isPrintable = event.key.length === 1 && !event.metaKey && !event.ctrlKey && !event.altKey;
+
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    newlineMainPageConsoleText();
+                    return;
+                }
+
+                if (event.key === "Backspace") {
+                    event.preventDefault();
+                    backspaceMainPageConsoleText();
+                    return;
+                }
+
+                if (isPrintable) {
+                    event.preventDefault();
+                    appendMainPageConsoleText(event.key);
+                }
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            renderMainPageConsole();
+        });
+    </script>
+</body>
+</html>

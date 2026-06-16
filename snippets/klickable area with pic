@@ -1,9 +1,0 @@
-<a href="/about" class="fill-div">
-<div class = "gfg">
-<!-- link to main stylesheet -->
-<img src="{{ site.url }}{{ site.baseurl }}/assets/bg2.png" />
-<br>
-This page is currently under construction.
-</a>
-</div>
-</a>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A04_genius</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 32px;
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f3f3f3;
+            color: #222;
+        }
+        .page-header-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .page-header-image {
+            width: calc(100% + 64px);
+            margin: -32px -32px 24px -32px;
+            aspect-ratio: 1600 / 500;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+        }
+        .back-link {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: 10;
+            display: inline-block;
+            padding: 10px 16px;
+            color: #222;
+            text-decoration: none;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .files-card {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px 24px;
+        }
+        .file-row {
+            padding: 10px 0;
+            border-bottom: 1px solid #e7e7e7;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .file-row:last-child {
+            border-bottom: none;
+        }
+        .files-card h1,
+        .files-card h2,
+        .files-card h3,
+        .files-card h4,
+        .files-card h5,
+        .files-card h6 {
+            margin: 24px 0 12px 0;
+            line-height: 1.2;
+            color: #222;
+        }
+        .files-card h1 { font-size: 26px; }
+        .files-card h2 { font-size: 22px; }
+        .files-card h3 { font-size: 19px; }
+        .files-card h4 { font-size: 17px; }
+        .files-card h5 { font-size: 15px; }
+        .files-card h6 { font-size: 14px; }
+        .files-card p {
+            margin: 0 0 14px 0;
+            font-size: 16px;
+            line-height: 1.55;
+            color: #222;
+        }
+.files-card ul,
+.files-card ol {
+    margin: 0 0 14px 0;
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 1.55;
+    list-style-position: outside;
+}
+.files-card li {
+    display: list-item;
+    margin: 0 0 8px 0;
+    padding-left: 0;
+}
+.files-card li p {
+    margin: 0;
+}
+        .files-card strong {
+            font-weight: 700;
+        }
+        .files-card em {
+            font-style: italic;
+        }
+        .files-card a {
+            color: #2f6fa3;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1px 4px;
+            border-radius: 6px;
+            transition: color 0.18s ease, background-color 0.18s ease;
+        }
+        .files-card a:hover {
+            color: #255b86;
+            background-color: #dbe6f2;
+        }
+        .files-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 0 16px 0;
+            font-size: 15px;
+        }
+        .files-card th,
+        .files-card td {
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid #e7e7e7;
+            vertical-align: top;
+        }
+        .files-card th {
+            font-weight: 700;
+            font-size: 15px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            border-bottom: 2px solid #d0d0d0;
+        }
+        .files-card tr:last-child td {
+            border-bottom: none;
+        }
+        .files-card tbody tr:hover td {
+            background: #f7f7f7;
+        }
+        .gallery-block {
+            margin: 24px 0 28px 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        .gallery-item {
+            display: block;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #e5e5e5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            padding: 0;
+            transform: translateY(0) scale(1);
+            transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+        }
+        .gallery-item:hover {
+            background-color: transparent;
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.20);
+            filter: brightness(1.03);
+        }
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.22s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+        .gallery-item:focus-visible {
+            outline: 3px solid rgba(47, 111, 163, 0.35);
+            outline-offset: 3px;
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.20);
+        }
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background: rgba(12, 16, 24, 0.88);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.18s ease;
+            z-index: 1000;
+        }
+        .lightbox-overlay.is-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .lightbox-backdrop {
+            position: absolute;
+            inset: 0;
+        }
+        .lightbox-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: min(92vw, 1400px);
+            max-height: 92vh;
+        }
+        .lightbox-image-wrap {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        .lightbox-image {
+            display: block;
+            max-width: 100%;
+            max-height: calc(92vh - 96px);
+            width: auto;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+            background: #111;
+            position: relative;
+            z-index: 1;
+        }
+        .lightbox-close,
+        .lightbox-nav {
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background-color 0.18s ease, transform 0.18s ease;
+        }
+        .lightbox-close:hover,
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: scale(1.04);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -18px;
+            right: -18px;
+            width: 46px;
+            height: 46px;
+            border-radius: 999px;
+            font-size: 26px;
+            line-height: 1;
+            z-index: 3;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 56px;
+            height: 72px;
+            border-radius: 14px;
+            font-size: 34px;
+            line-height: 1;
+            z-index: 3;
+        }
+        .lightbox-nav:hover {
+            transform: translateY(-50%) scale(1.04);
+        }
+        .lightbox-nav.prev {
+            left: 18px;
+        }
+        .lightbox-nav.next {
+            right: 18px;
+        }
+        .lightbox-caption {
+            margin-top: 14px;
+            max-width: min(900px, 92vw);
+            text-align: center;
+        }
+        .lightbox-caption-title {
+            font-size: 15px;
+            line-height: 1.35;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.92);
+        }
+        .lightbox-caption-description {
+            margin-top: 8px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.82);
+            white-space: pre-line;
+        }
+        @media (max-width: 900px) {
+            .lightbox-overlay {
+                padding: 18px;
+            }
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+            .lightbox-nav {
+                width: 48px;
+                height: 60px;
+                font-size: 28px;
+            }
+            .lightbox-nav.prev {
+                left: 8px;
+            }
+            .lightbox-nav.next {
+                right: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="back-link" href="index.html#tab-A">← Back</a>
+    <a class="page-header-link" href="index.html#tab-A"><div class="page-header-image" style="background-image: url('./A04_genius/header.jpg')"></div></a>
+    <div class="files-card">
+        <h1>Genius</h1>
+<p><strong>2004-2005 </strong></p>
+<p>Edutainment series created together with Germany´s leading schoolbook publisher Cornelsen. Genius combined complex strategy (a popular genre in Germany) with educational aspects like meeting famous inventors and entrepreneurs, solving scientific puzzles and learning basic of mathematics, physics (or biology in part 2).</p>
+<div class="gallery-block"><div class="gallery-grid"><a class="gallery-item" href="./A04_genius/gallery/01.jpg" data-gallery-image="./A04_genius/gallery/01.jpg" data-gallery-description="GENIUS 2004"><img src="./A04_genius/gallery/01.jpg" alt="01" loading="lazy"></a><a class="gallery-item" href="./A04_genius/gallery/02.jpg" data-gallery-image="./A04_genius/gallery/02.jpg" data-gallery-description="GENIUS 2004"><img src="./A04_genius/gallery/02.jpg" alt="02" loading="lazy"></a><a class="gallery-item" href="./A04_genius/gallery/03.jpg" data-gallery-image="./A04_genius/gallery/03.jpg" data-gallery-description="GENIUS 2004 - Cover artwork, draft.  Artist: Silvio Ullrich"><img src="./A04_genius/gallery/03.jpg" alt="03" loading="lazy"></a><a class="gallery-item" href="./A04_genius/gallery/04.jpg" data-gallery-image="./A04_genius/gallery/04.jpg" data-gallery-description="GENIUS 2004 - Intro : &quot;From a small little bicycle workshop...&quot;"><img src="./A04_genius/gallery/04.jpg" alt="04" loading="lazy"></a><a class="gallery-item" href="./A04_genius/gallery/05.jpg" data-gallery-image="./A04_genius/gallery/05.jpg" data-gallery-description="GENIUS 2004 - Extro : &quot;... to exploring the space.&quot;"><img src="./A04_genius/gallery/05.jpg" alt="05" loading="lazy"></a></div></div>
+<p><strong>Links</strong></p>
+<ul>
+<li><a href="https://youtu.be/0R5-3YHv118" target="_blank" rel="noopener noreferrer">Trailer GENIUS 1 (Physics) Youtube</a></li>
+<li><a href="https://youtu.be/FweqCTSGnH8" target="_blank" rel="noopener noreferrer">Intro   GENIUS 1 (Physics) Youtube</a></li>
+<li><a href="https://youtu.be/-8M8CHHdc2Q" target="_blank" rel="noopener noreferrer">Trailer GENIUS 2 (Biology) Youtube</a></li>
+</ul>
+<p>TODO:<br>Add more screenshots, artworks, press coverage, links</p>
+    </div>
+    <div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true">
+        <div class="lightbox-backdrop" data-lightbox-close></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">×</button>
+            <div class="lightbox-image-wrap">
+                <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+                <img class="lightbox-image" id="lightboxImage" src="" alt="">
+                <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">›</button>
+            </div>
+            <div class="lightbox-caption" id="lightboxCaption">
+                <div class="lightbox-caption-title" id="lightboxCaptionTitle"></div>
+                <div class="lightbox-caption-description" id="lightboxCaptionDescription"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const galleryLinks = Array.from(document.querySelectorAll(".gallery-item[data-gallery-image]"));
+        const lightboxOverlay = document.getElementById("lightboxOverlay");
+        const lightboxImage = document.getElementById("lightboxImage");
+        const lightboxCaption = document.getElementById("lightboxCaption");
+        const lightboxCaptionTitle = document.getElementById("lightboxCaptionTitle");
+        const lightboxCaptionDescription = document.getElementById("lightboxCaptionDescription");
+        const lightboxClose = document.getElementById("lightboxClose");
+        const lightboxPrev = document.getElementById("lightboxPrev");
+        const lightboxNext = document.getElementById("lightboxNext");
+        let currentGalleryIndex = -1;
+        lightboxCaption.style.display = "none";
+
+        function showGalleryImage(index) {
+            if (!galleryLinks.length) { return; }
+
+            const normalizedIndex = (index + galleryLinks.length) % galleryLinks.length;
+            const link = galleryLinks[normalizedIndex];
+            const imageSrc = link.getAttribute("data-gallery-image") || "";
+            const imageTitle = "";
+            const imageDescription = link.getAttribute("data-gallery-description") || "";
+
+            currentGalleryIndex = normalizedIndex;
+            lightboxImage.src = imageSrc;
+            lightboxImage.alt = imageTitle;
+            lightboxCaptionTitle.textContent = imageTitle;
+            lightboxCaptionDescription.textContent = imageDescription;
+            lightboxCaption.style.display = (imageTitle || imageDescription) ? "block" : "none";
+            lightboxOverlay.classList.add("is-visible");
+            lightboxOverlay.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            lightboxOverlay.classList.remove("is-visible");
+            lightboxOverlay.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            lightboxImage.src = "";
+            lightboxImage.alt = "";
+            lightboxCaptionTitle.textContent = "";
+            lightboxCaptionDescription.textContent = "";
+            lightboxCaption.style.display = "none";
+            currentGalleryIndex = -1;
+        }
+
+        function showPreviousImage() {
+            if (currentGalleryIndex < 0) { return; }
+            showGalleryImage(currentGalleryIndex - 1);
+        }
+
+        function showNextImage() {
+            if (currentGalleryIndex < 0) { return; }
+            showGalleryImage(currentGalleryIndex + 1);
+        }
+
+        galleryLinks.forEach((link, index) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                showGalleryImage(index);
+            });
+        });
+
+        lightboxClose.addEventListener("click", closeLightbox);
+        lightboxPrev.addEventListener("click", showPreviousImage);
+        lightboxNext.addEventListener("click", showNextImage);
+
+        lightboxOverlay.addEventListener("click", (event) => {
+            if (event.target.hasAttribute("data-lightbox-close")) {
+                closeLightbox();
+            }
+        });
+
+        function goBackToIndex(event) {
+            const isEscape = event.key === "Escape"
+                || event.key === "Esc"
+                || event.code === "Escape"
+                || event.keyCode === 27;
+
+            if (!isEscape) { return; }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (lightboxOverlay.classList.contains("is-visible")) {
+                closeLightbox();
+                return;
+            }
+
+            window.location.assign("index.html#tab-A");
+        }
+
+        window.addEventListener("keydown", (event) => {
+            const isEscape = event.key === "Escape"
+                || event.key === "Esc"
+                || event.code === "Escape"
+                || event.keyCode === 27;
+            const isArrowLeft = event.key === "ArrowLeft" || event.code === "ArrowLeft" || event.keyCode === 37;
+            const isArrowRight = event.key === "ArrowRight" || event.code === "ArrowRight" || event.keyCode === 39;
+
+            if (lightboxOverlay.classList.contains("is-visible")) {
+                if (isEscape) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    closeLightbox();
+                    return;
+                }
+                if (isArrowLeft) {
+                    event.preventDefault();
+                    showPreviousImage();
+                    return;
+                }
+                if (isArrowRight) {
+                    event.preventDefault();
+                    showNextImage();
+                    return;
+                }
+            }
+
+            goBackToIndex(event);
+        }, true);
+        window.addEventListener("keyup", (event) => {
+            const isEscape = event.key === "Escape"
+                || event.key === "Esc"
+                || event.code === "Escape"
+                || event.keyCode === 27;
+
+            if (!isEscape) { return; }
+            if (lightboxOverlay.classList.contains("is-visible")) { return; }
+
+            event.preventDefault();
+            event.stopPropagation();
+        }, true);
+    </script>
+</body>
+</html>
