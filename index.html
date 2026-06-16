@@ -44,7 +44,7 @@
         .main-page-title-overlay {
             position: absolute;
             left: clamp(165px, 24.22vw, 248px);
-            bottom: clamp(73px, 10.74vw, 110px);
+            bottom: clamp(108px, 15.5vw, 150px);
             width: clamp(230px, 33vw, 340px);
             z-index: 2;
             color: #ffffff;
@@ -340,6 +340,44 @@
             margin-top: 28px;
             font-size: 14px;
             color: #666;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .main-page-header {
+                width: calc(100% + 32px);
+                margin: -16px -16px 0 -16px;
+                height: clamp(170px, 55vw, 235px);
+            }
+            .main-page-title-overlay {
+                left: clamp(92px, 29vw, 145px);
+                bottom: 52px;
+                width: auto;
+                right: 6px;
+                font-size: clamp(10px, 3.2vw, 14px);
+                line-height: 1.0;
+            }
+            .main-page-title-overlay div + div {
+                margin-top: 1px;
+            }
+            .main-page-title-line {
+                min-height: 1.0em;
+            }
+            .tab-bar {
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 6px;
+                margin-top: -40px;
+                padding: 0;
+            }
+            .tab-button {
+                padding: 8px 14px;
+                font-size: 14px;
+            }
+            .folder-section {
+                margin-top: 28px;
+            }
         }
     </style>
 </head>
