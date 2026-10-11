@@ -49,14 +49,50 @@
             background-position: left 3px;
             background-repeat: no-repeat;
         }
+        /* Hologramm-Sweep: bei Mouse-Hover läuft einmal ein heller Balken mit Scanlines über das Portrait.
+           Das Portrait selbst dient als Maske, damit nur das Motiv und nicht der Hintergrund leuchtet. */
+        .main-page-portrait-holo {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            height: var(--header-h);
+            width: calc(var(--header-h) * 856 / 873);
+            z-index: 1;
+            mix-blend-mode: screen;
+            -webkit-mask-image: var(--portrait-mask);
+            mask-image: var(--portrait-mask);
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            background-image:
+                linear-gradient(to bottom, transparent 0%, rgba(150, 235, 255, 0.28) 45%, rgba(255, 255, 255, 0.35) 50%, rgba(150, 235, 255, 0.28) 55%, transparent 100%),
+                repeating-linear-gradient(to bottom, rgba(120, 220, 255, 0.28) 0 1px, transparent 1px 3px);
+            background-size: 100% 44%, 100% 100%;
+            background-repeat: no-repeat, repeat;
+            opacity: 0;
+        }
+        .main-page-portrait-holo.is-sweeping {
+            animation: main-page-portrait-holo 1.64s linear 1;
+        }
+        @keyframes main-page-portrait-holo {
+            0%    { opacity: 0;    background-position: 0 -80%, 0 0; }
+            11%   { opacity: 0.45; }
+            33%   { opacity: 0.30; }
+            36%   { opacity: 0.50; }
+            78%   { opacity: 0.40; }
+            100%  { opacity: 0;    background-position: 0 180%, 0 0; }
+        }
         .main-page-title-overlay {
             position: absolute;
-            left: calc(var(--header-h) * 1.035);
-            top: 0;
+            left: calc(var(--header-h) * 0.86);
+            /* 8 Zeilen à 1.08em + 7 Abstände à 0.13em = 9.55em. Oben 10% Luft,
+               unten endet die letzte Zeile 8px über den Tabs (48px hoch). */
+            top: calc(var(--header-h) * 0.10);
             right: 8px;
             z-index: 2;
             color: #f6fcff;
-            font-size: calc(var(--header-h) * 0.0862);
+            font-size: max(calc(var(--header-h) * 0.065), calc((var(--header-h) * 0.90 - 56px) / 9.55));
             font-weight: 400;
             line-height: 1.08;
             letter-spacing: 0.02em;
@@ -106,7 +142,6 @@
         .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(6) { animation-delay: 0.15s; }
         .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(7) { animation-delay: 0.18s; }
         .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(8) { animation-delay: 0.21s; }
-        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(9) { animation-delay: 0.24s; }
         .main-page-title-overlay:focus {
             --crt-glow:
                 -0.6px 0 rgba(255, 60, 120, 0.30),
@@ -180,6 +215,9 @@
             100% { transform: translateX(0); filter: brightness(1); }
         }
         @media (prefers-reduced-motion: reduce) {
+            .main-page-portrait-holo {
+                display: none;
+            }
             .main-page-title-overlay,
             .main-page-title-overlay.is-crt-hover .main-page-title-line {
                 animation: none;
@@ -334,6 +372,8 @@
             background: #ffffff;
             color: #006B99;
             box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.10);
+            /* Schatten unten abschneiden, damit der Tab nahtlos in die Seite übergeht */
+            clip-path: inset(-20px -20px 0 -20px);
         }
         .tab-panel {
             display: block;
@@ -354,7 +394,7 @@
     </style>
 </head>
 <body>
-    <div class="page-header-image main-page-header"><div class="main-page-header-inner" style="background-image: url('portrait2.png')"></div><div class="main-page-title-overlay" id="mainPageTitleOverlay" tabindex="0" role="textbox" aria-label="Header console"><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><span class="main-page-title-cursor" id="mainPageTitleCursor"></span></div></div>
+    <div class="page-header-image main-page-header"><div class="main-page-header-inner" style="background-image: url('portrait5.png')"></div><div class="main-page-portrait-holo" style="--portrait-mask: url('portrait5.png')" aria-hidden="true"></div><div class="main-page-title-overlay" id="mainPageTitleOverlay" tabindex="0" role="textbox" aria-label="Header console"><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><span class="main-page-title-cursor" id="mainPageTitleCursor"></span></div></div>
     <div class="tab-bar"><button class="tab-button active" data-tab="tab-A">Trackrecord</button>
 <button class="tab-button" data-tab="tab-misc">Misc</button>
 <button class="tab-button" data-tab="tab-D">CV</button></div>
@@ -592,6 +632,16 @@
         })();
     </script>
     <script>
+        // Hologramm-Sweep einmal pro Hover; ein laufender Sweep wird nicht neu gestartet
+        const mainPagePortraitHolo = document.querySelector(".main-page-portrait-holo");
+        if (mainPagePortraitHolo) {
+            mainPagePortraitHolo.addEventListener("mouseenter", () => {
+                mainPagePortraitHolo.classList.add("is-sweeping");
+            });
+            mainPagePortraitHolo.addEventListener("animationend", () => {
+                mainPagePortraitHolo.classList.remove("is-sweeping");
+            });
+        }
         const mainPageTitleOverlay = document.getElementById("mainPageTitleOverlay");
         const mainPageTitleLines = mainPageTitleOverlay
             ? Array.from(mainPageTitleOverlay.querySelectorAll(".main-page-title-line"))
@@ -599,7 +649,7 @@
         const mainPageTitleCursor = document.getElementById("mainPageTitleCursor");
 
         let mainPageTitleHoverTimeout = null;
-        let mainPageConsoleLines = ["", "", "", "", "", "", "", "", ""];
+        let mainPageConsoleLines = ["", "", "", "", "", "", "", ""];
         let mainPageCursorLineIndex = 0;
         let mainPageCursorCharIndex = 0;
         const mainPageBootLines = ["", "", "", "BERND BEYREUTHER", "MAKING GAMES SINCE 1989", "PERSONAL WEBSITE"];
