@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bernd Beyreuther.  Making Games.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/vt323@5.2.6/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/nunito@5.2.7/400.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/nunito@5.2.7/500.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/nunito@5.2.7/600.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/nunito@5.2.7/700.css">
     <style>
         * { box-sizing: border-box; }
         :root {
@@ -13,9 +17,9 @@
         body {
             margin: 0;
             padding: var(--page-pad);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background: #ffffff;
-            color: #222;
+            color: #1b2429;
         }
         .page-header-image {
             width: calc(100% + 2 * var(--page-pad));
@@ -51,144 +55,135 @@
             top: 0;
             right: 8px;
             z-index: 2;
-            color: #ffffff;
+            color: #f6fcff;
             font-size: calc(var(--header-h) * 0.0862);
             font-weight: 400;
             line-height: 1.08;
             letter-spacing: 0.02em;
             font-family: "VT323", "Lucida Console", Monaco, monospace;
-            text-shadow: 0 0 4px rgba(255, 255, 255, 0.22), 0 0 10px rgba(255, 255, 255, 0.10);
+            /* Leichte Farbsäume (Konvergenzfehler) + Phosphor-Glühen */
+            --crt-glow:
+                -0.6px 0 rgba(255, 60, 120, 0.30),
+                0.6px 0 rgba(60, 230, 255, 0.30),
+                0 0 3px rgba(255, 255, 255, 0.35),
+                0 0 12px rgba(190, 235, 255, 0.20);
+            text-shadow: var(--crt-glow);
             pointer-events: auto;
             cursor: text;
             white-space: pre;
-            filter: brightness(1.02);
-            animation: main-page-crt-flicker 0.16s steps(2, end) infinite;
-            will-change: transform, text-shadow, filter;
             outline: none;
             user-select: none;
+            /* Scanlines (Ebene 1) + langsam durchlaufender Helligkeitsbalken (Ebene 2) */
+            --crt-scan: max(2px, calc(var(--header-h) * 0.011));
+            -webkit-mask-image:
+                repeating-linear-gradient(to bottom, #000 0 50%, rgba(0, 0, 0, 0.82) 50% 100%),
+                linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+            mask-image:
+                repeating-linear-gradient(to bottom, #000 0 50%, rgba(0, 0, 0, 0.82) 50% 100%),
+                linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+            -webkit-mask-size: 100% var(--crt-scan), 100% 35%;
+            mask-size: 100% var(--crt-scan), 100% 35%;
+            -webkit-mask-repeat: repeat, no-repeat;
+            mask-repeat: repeat, no-repeat;
+            animation:
+                main-page-crt-flicker 5.3s linear infinite,
+                main-page-crt-roll 8s linear infinite;
         }
         .main-page-title-overlay div + div {
             margin-top: 0.13em;
         }
-        .main-page-title-overlay::before,
-        .main-page-title-overlay::after {
-            content: none;
-        }
-        .main-page-title-overlay.is-crt-hover {
-            animation:
-                main-page-crt-hover-flicker 0.12s steps(2, end) 1,
-                main-page-crt-hover-jitter 0.24s steps(4, end) 1,
-                main-page-crt-hover-skew 0.24s steps(4, end) 1,
-                main-page-crt-hover-horizontal-tear 0.24s steps(4, end) 1,
-                main-page-crt-hover-tear 0.24s steps(3, end) 1;
-            filter: brightness(1.04) contrast(1.05);
-            text-shadow:
-                -1px 0 rgba(255, 0, 80, 0.22),
-                1px 0 rgba(0, 255, 255, 0.22),
-                0 0 4px rgba(255, 255, 255, 0.16),
-                0 0 8px rgba(255, 255, 255, 0.08);
-        }
-        .main-page-title-overlay.is-crt-hover::after {
-            content: none;
-        }
         .main-page-title-line {
             min-height: 1.08em;
         }
+        /* Hover: kurzer H-Sync-Verlust, der als Welle von oben nach unten durchläuft */
+        .main-page-title-overlay.is-crt-hover .main-page-title-line {
+            animation: main-page-crt-sync 0.6s steps(1, end) both;
+        }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(2) { animation-delay: 0.03s; }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(3) { animation-delay: 0.06s; }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(4) { animation-delay: 0.09s; }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(5) { animation-delay: 0.12s; }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(6) { animation-delay: 0.15s; }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(7) { animation-delay: 0.18s; }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(8) { animation-delay: 0.21s; }
+        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(9) { animation-delay: 0.24s; }
         .main-page-title-overlay:focus {
-            text-shadow:
-                0 0 6px rgba(255, 255, 255, 0.26),
-                0 0 14px rgba(255, 255, 255, 0.14);
+            --crt-glow:
+                -0.6px 0 rgba(255, 60, 120, 0.30),
+                0.6px 0 rgba(60, 230, 255, 0.30),
+                0 0 5px rgba(255, 255, 255, 0.40),
+                0 0 14px rgba(190, 235, 255, 0.24);
         }
         .main-page-title-line,
         .main-page-title-cursor {
             position: relative;
-        }
-        .main-page-title-line::after,
-        .main-page-title-cursor::after {
-            content: none;
         }
         .main-page-title-cursor {
             position: absolute;
             display: inline-block;
             width: 0.5em;
             height: 0.95em;
-            background: #ffffff;
+            background: #f6fcff;
             vertical-align: baseline;
-            box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
             animation: main-page-cursor-blink 0.8s steps(1, end) infinite;
         }
         @keyframes main-page-cursor-blink {
             0%, 49% { opacity: 1; }
             50%, 100% { opacity: 0; }
         }
+        /* Unregelmäßiges, leises Flackern mit seltenen kurzen Einbrüchen */
         @keyframes main-page-crt-flicker {
-            0%   { opacity: 0.96; }
-            25%  { opacity: 1.00; }
-            50%  { opacity: 0.97; }
-            75%  { opacity: 0.99; }
-            100% { opacity: 0.98; }
+            0%    { opacity: 0.97; }
+            9%    { opacity: 1.00; }
+            17%   { opacity: 0.96; }
+            31%   { opacity: 0.99; }
+            43%   { opacity: 0.97; }
+            43.6% { opacity: 0.86; }
+            44.2% { opacity: 0.98; }
+            58%   { opacity: 1.00; }
+            71%   { opacity: 0.96; }
+            84%   { opacity: 0.99; }
+            91%   { opacity: 0.92; }
+            91.5% { opacity: 1.00; }
+            100%  { opacity: 0.97; }
         }
-        @keyframes main-page-crt-hover-flicker {
-            0%   { opacity: 1.00; }
-            30%  { opacity: 0.96; }
-            65%  { opacity: 0.99; }
-            100% { opacity: 1.00; }
+        @keyframes main-page-crt-roll {
+            0%   { -webkit-mask-position: 0 0, 0 -70%; mask-position: 0 0, 0 -70%; }
+            100% { -webkit-mask-position: 0 0, 0 170%; mask-position: 0 0, 0 170%; }
         }
-        @keyframes main-page-crt-hover-jitter {
-            0%   { transform: translate(0px, 0px); }
-            20%  { transform: translate(-1px, 0px); }
-            40%  { transform: translate(1px, 0px); }
-            60%  { transform: translate(-1px, 0px); }
-            80%  { transform: translate(1px, 0px); }
-            100% { transform: translate(0px, 0px); }
-        }
-        @keyframes main-page-crt-hover-skew {
-            0%   { clip-path: inset(0 0 0 0); }
-            35%  { clip-path: inset(1px 0 0 0); }
-            70%  { clip-path: inset(0 0 1px 0); }
-            100% { clip-path: inset(0 0 0 0); }
-        }
-        @keyframes main-page-crt-hover-horizontal-tear {
-            0% {
-                clip-path: inset(0 0 0 0);
-                transform: translateX(0);
+        /* Harte Sprünge zwischen den Keyframes (steps), kein weiches Gleiten */
+        @keyframes main-page-crt-sync {
+            0%   { transform: translateX(0); filter: brightness(1); }
+            6%   {
+                transform: translateX(-0.16em) skewX(-7deg);
+                filter: brightness(1.5);
+                text-shadow:
+                    -3px 0 rgba(255, 60, 120, 0.7),
+                    3px 0 rgba(60, 230, 255, 0.7),
+                    0 0 8px rgba(255, 255, 255, 0.5);
             }
-            32% {
-                clip-path: polygon(0 42%, 100% 42%, 100% 44%, 0 44%);
-                transform: translateX(-1px);
+            14%  {
+                transform: translateX(0.1em) skewX(4deg);
+                filter: brightness(1.25);
+                text-shadow:
+                    2px 0 rgba(255, 60, 120, 0.55),
+                    -2px 0 rgba(60, 230, 255, 0.55),
+                    0 0 6px rgba(255, 255, 255, 0.4);
             }
-            58% {
-                clip-path: polygon(0 68%, 100% 68%, 100% 70%, 0 70%);
-                transform: translateX(1px);
+            22%  { transform: translateX(-0.06em) skewX(-2deg); filter: brightness(1.35); }
+            30%  { transform: translateX(0.12em); filter: brightness(1.1); }
+            40%  { transform: translateX(-0.03em) skewX(-1deg); filter: brightness(1.2); }
+            52%  { transform: translateX(0.04em); filter: brightness(1.05); }
+            66%  { transform: translateX(-0.015em); filter: brightness(1.1); }
+            80%  { transform: translateX(0); filter: brightness(1); }
+            100% { transform: translateX(0); filter: brightness(1); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .main-page-title-overlay,
+            .main-page-title-overlay.is-crt-hover .main-page-title-line {
+                animation: none;
             }
-            100% {
-                clip-path: inset(0 0 0 0);
-                transform: translateX(0);
-            }
-        }
-        @keyframes main-page-crt-hover-tear {
-            0%   { filter: brightness(1.04) contrast(1.05); }
-            45%  { filter: brightness(1.06) contrast(1.07); }
-            100% { filter: brightness(1.04) contrast(1.05); }
-        }
-        @keyframes main-page-crt-hover-rgb {
-            0%   { transform: translate(0px, 0px); opacity: 0.0; }
-            10%  { transform: translate(-2px, 0px); opacity: 0.75; }
-            22%  { transform: translate(2px, 0px); opacity: 0.45; }
-            36%  { transform: translate(-1px, 0px); opacity: 0.82; }
-            52%  { transform: translate(3px, 0px); opacity: 0.38; }
-            68%  { transform: translate(-2px, 0px); opacity: 0.70; }
-            84%  { transform: translate(1px, 0px); opacity: 0.30; }
-            100% { transform: translate(0px, 0px); opacity: 0.0; }
-        }
-        @keyframes main-page-crt-hover-noise {
-            0%   { clip-path: inset(0 0 0 0); }
-            12%  { clip-path: polygon(0 0, 100% 0, 100% 16%, 0 10%); }
-            26%  { clip-path: polygon(0 22%, 100% 18%, 100% 40%, 0 36%); }
-            39%  { clip-path: polygon(0 44%, 100% 40%, 100% 58%, 0 62%); }
-            54%  { clip-path: polygon(0 60%, 100% 56%, 100% 74%, 0 78%); }
-            70%  { clip-path: polygon(0 74%, 100% 72%, 100% 88%, 0 92%); }
-            100% { clip-path: inset(0 0 0 0); }
         }
         h1 {
             margin: -42px 0 24px 0;
@@ -210,7 +205,7 @@
             margin: 0 0 20px 0;
             font-size: 18px;
             line-height: 1.4;
-            color: #555;
+            color: #4b575f;
         }
         .folder-grid {
             display: grid;
@@ -254,7 +249,7 @@
             overflow: hidden;
             border-radius: 7px;
             background: #e9e9e9;
-            color: #222;
+            color: #1b2429;
             text-decoration: none;
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.10);
             transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -281,7 +276,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 1.25;
-            color: #8a8a8a;
+            color: #7f8c95;
             margin-bottom: 8px;
             letter-spacing: 0;
         }
@@ -290,14 +285,14 @@
             font-weight: 700;
             line-height: 1.2;
             word-break: break-word;
-            color: #6f6f6f;
+            color: #63727b;
             margin: 0;
         }
         .folder-card-subtitle {
             font-size: 13px;
             font-weight: 400;
             line-height: 1.25;
-            color: #8a8a8a;
+            color: #7f8c95;
             margin-top: 8px;
         }
         .tab-bar {
@@ -321,7 +316,7 @@
             background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            color: #333;
+            color: #2a353c;
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
@@ -332,7 +327,7 @@
         .tab-button:hover {
             height: 45px;
             background: rgba(255, 255, 255, 0.75);
-            color: #111;
+            color: #0d1215;
         }
         .tab-button.active {
             height: 48px;
@@ -349,7 +344,7 @@
         .footer-timestamp {
             margin-top: 28px;
             font-size: 14px;
-            color: #666;
+            color: #5b6971;
         }
         @media (max-width: 600px) {
             .folder-section {
@@ -563,7 +558,7 @@
 </a>
     </div>
 </section></div></div>
-    <div class="footer-timestamp">Updated: 2026-Oct-10</div>
+    <div class="footer-timestamp">Updated: 2026-Oct-11</div>
     <script>
         (function () {
             const buttons = Array.from(document.querySelectorAll(".tab-button"));
@@ -730,7 +725,27 @@
             mainPageTitleHoverTimeout = window.setTimeout(() => {
                 mainPageTitleOverlay.classList.remove("is-crt-hover");
                 mainPageTitleHoverTimeout = null;
-            }, 260);
+            }, 900);
+        }
+
+        // Ab und zu verrutscht eine einzelne Zeile kurz, wie bei einem alten Röhrenmonitor.
+        function scheduleMainPageCrtBlip() {
+            const delay = 2500 + Math.random() * 6000;
+            window.setTimeout(() => {
+                const hovering = mainPageTitleOverlay.classList.contains("is-crt-hover");
+                const filledLines = mainPageTitleLines.filter((line) => (line.textContent || "").trim() !== "");
+                if (!hovering && filledLines.length && typeof Element.prototype.animate === "function") {
+                    const line = filledLines[Math.floor(Math.random() * filledLines.length)];
+                    const shift = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.random() * 2);
+                    line.animate([
+                        { transform: "translateX(0)" },
+                        { transform: "translateX(" + shift + "px)", filter: "brightness(1.25)" },
+                        { transform: "translateX(" + (-shift / 2) + "px)" },
+                        { transform: "translateX(0)" }
+                    ], { duration: 140, easing: "steps(3, end)" });
+                }
+                scheduleMainPageCrtBlip();
+            }, delay);
         }
 
         function setMainPageTitleCursorPosition(lineIndex, charIndex) {
@@ -907,6 +922,9 @@
                 mainPageTitleOverlay.addEventListener("mouseenter", () => {
                     triggerMainPageTitleHoverEffect();
                 });
+                if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                    scheduleMainPageCrtBlip();
+                }
             }
 
             // Console input is captured globally, independent of focus, so that
