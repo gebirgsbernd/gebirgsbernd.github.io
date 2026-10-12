@@ -86,13 +86,13 @@
         .main-page-title-overlay {
             position: absolute;
             left: calc(var(--header-h) * 0.86);
-            /* 8 Zeilen à 1.08em + 7 Abstände à 0.13em = 9.55em. Oben 10% Luft,
+            /* 7 Zeilen à 1.08em + 6 Abstände à 0.13em = 8.34em. Oben 10% Luft,
                unten endet die letzte Zeile 8px über den Tabs (48px hoch). */
             top: calc(var(--header-h) * 0.10);
             right: 8px;
             z-index: 2;
             color: #f6fcff;
-            font-size: max(calc(var(--header-h) * 0.065), calc((var(--header-h) * 0.90 - 56px) / 9.55));
+            font-size: max(calc(var(--header-h) * 0.0744), calc((var(--header-h) * 0.90 - 56px) / 8.34));
             font-weight: 400;
             line-height: 1.08;
             letter-spacing: 0.02em;
@@ -141,7 +141,6 @@
         .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(5) { animation-delay: 0.12s; }
         .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(6) { animation-delay: 0.15s; }
         .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(7) { animation-delay: 0.18s; }
-        .main-page-title-overlay.is-crt-hover .main-page-title-line:nth-child(8) { animation-delay: 0.21s; }
         .main-page-title-overlay:focus {
             --crt-glow:
                 -0.6px 0 rgba(255, 60, 120, 0.30),
@@ -394,7 +393,7 @@
     </style>
 </head>
 <body>
-    <div class="page-header-image main-page-header"><div class="main-page-header-inner" style="background-image: url('portrait5.png')"></div><div class="main-page-portrait-holo" style="--portrait-mask: url('portrait5.png')" aria-hidden="true"></div><div class="main-page-title-overlay" id="mainPageTitleOverlay" tabindex="0" role="textbox" aria-label="Header console"><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><span class="main-page-title-cursor" id="mainPageTitleCursor"></span></div></div>
+    <div class="page-header-image main-page-header"><div class="main-page-header-inner" style="background-image: url('portrait5.png')"></div><div class="main-page-portrait-holo" style="--portrait-mask: url('portrait5.png')" aria-hidden="true"></div><div class="main-page-title-overlay" id="mainPageTitleOverlay" tabindex="0" role="textbox" aria-label="Header console"><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><div class="main-page-title-line"></div><span class="main-page-title-cursor" id="mainPageTitleCursor"></span></div></div>
     <div class="tab-bar"><button class="tab-button active" data-tab="tab-A">Trackrecord</button>
 <button class="tab-button" data-tab="tab-misc">Misc</button>
 <button class="tab-button" data-tab="tab-D">CV</button></div>
@@ -598,7 +597,7 @@
 </a>
     </div>
 </section></div></div>
-    <div class="footer-timestamp">Updated: 2026-Oct-11</div>
+    <div class="footer-timestamp">Updated: 2026-Oct-12</div>
     <script>
         (function () {
             const buttons = Array.from(document.querySelectorAll(".tab-button"));
@@ -649,7 +648,7 @@
         const mainPageTitleCursor = document.getElementById("mainPageTitleCursor");
 
         let mainPageTitleHoverTimeout = null;
-        let mainPageConsoleLines = ["", "", "", "", "", "", "", ""];
+        let mainPageConsoleLines = ["", "", "", "", "", "", ""];
         let mainPageCursorLineIndex = 0;
         let mainPageCursorCharIndex = 0;
         const mainPageBootLines = ["", "", "", "BERND BEYREUTHER", "MAKING GAMES SINCE 1989", "PERSONAL WEBSITE"];
